@@ -24,6 +24,12 @@ MonoBehaviour:
   - name: HOVER_CARD
     Id: 3
     Data: {fileID: 11400000, guid: f09e65a56a7931240b4a1d2d89a5cd05, type: 2}
+  - name: SFX_TRANSITION_IN
+    Id: 4
+    Data: {fileID: 11400000, guid: acdd022886ea580499c6e09c90e14826, type: 2}
+  - name: SFX_TRANSITION_OUT
+    Id: 5
+    Data: {fileID: 11400000, guid: 4004d6e0c22303f41ae761a91550fb38, type: 2}
   - name: SFX_HOVER_BUTTON
     Id: 7
     Data: {fileID: 11400000, guid: ddbe9e6ac7eb5e744993ab8267a6f100, type: 2}
