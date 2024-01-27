@@ -1,4 +1,7 @@
 ﻿
+using System;
+
+[Serializable]
 public struct DialogueSentence
 {
     
