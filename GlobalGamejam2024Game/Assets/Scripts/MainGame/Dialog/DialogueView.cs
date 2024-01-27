@@ -2,6 +2,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace MainGame.Dialog
 {
@@ -9,6 +10,7 @@ namespace MainGame.Dialog
     {
         [SerializeField] private TMP_Text _dialogueText;
         [SerializeField] private TMP_Text _speakerNameText;
+        [SerializeField] private Button _nextButton;
         
         [SerializeField] private float _textSpeed = 0.1f;
         [SerializeField] private float _textDelay = 0.5f;
@@ -20,12 +22,25 @@ namespace MainGame.Dialog
         public Action OnCharacterDisplay;
         
         private Coroutine _typeSentenceCoroutine;
+        private bool _isSkipDialogue = false;
+        
+        
+        private void Awake()
+        {
+            _dialogueText.text = "";
+            _speakerNameText.text = "";
+            
+            _nextButton.onClick.AddListener(EndDialogue);
+            
+        }
+        
         
         public void StartDialogue( string speakerName, string dialogue)
         {
             _speakerNameText.text = speakerName;
             _dialogueText.text = "";
             
+            _isSkipDialogue = false;
             
             OnDialogueStart?.Invoke();
             
@@ -36,6 +51,11 @@ namespace MainGame.Dialog
         
         public void EndDialogue()
         {
+            if (!_isSkipDialogue)
+            {
+                _isSkipDialogue = true;
+                return;
+            }
             
             OnDialogueEnd?.Invoke();
             
@@ -47,6 +67,8 @@ namespace MainGame.Dialog
             _dialogueText.text = "";
             _speakerNameText.text = "";
             
+            
+            GameLoopManager.Instance.EndDialogue();
         }
         
         
@@ -69,8 +91,11 @@ namespace MainGame.Dialog
                     characterCount = 0;
                 }
                 
-                yield return new WaitForSeconds(_textSpeed);
+                if (!_isSkipDialogue) 
+                    yield return new WaitForSeconds(_textSpeed);
             }
+            
+            _isSkipDialogue = true;
             
         }
         

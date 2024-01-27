@@ -454,7 +454,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5d2f39d0dff5f47a4f70a1f2773398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cardDescription: {fileID: 11400000, guid: 169eb1c5ccad9cf448b16068d5c48283, type: 2}
+  _cardSo: {fileID: 0}
+  _useButton: {fileID: 389914114}
+  _isUsable: 1
 --- !u!114 &389914114
 MonoBehaviour:
   m_ObjectHideFlags: 0
