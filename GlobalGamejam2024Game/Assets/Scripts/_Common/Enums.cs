@@ -59,7 +59,7 @@ namespace GDC.Enums
         MOUSE,
         CAT_FOOD,
         BONE,
-        BOWL_OF_RICE,
+        RICE,
         WOOL,
         SCARE_MASK,
         MILK,
