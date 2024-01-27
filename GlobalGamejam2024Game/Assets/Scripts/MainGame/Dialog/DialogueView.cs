@@ -98,7 +98,6 @@ namespace MainGame.Dialog
             
             OnDialogueEnd?.Invoke();
             
-            GameLoopManager.Instance.EndDialogue();
         }
         
         private IEnumerator TypeSentence()
@@ -113,7 +112,7 @@ namespace MainGame.Dialog
                 var dialogueSentence = _dialogueQueue.Dequeue();
                 
                 
-                _speakerNameText.text = dialogueSentence.SpeakerName;
+                SetSpeakerName(dialogueSentence.SpeakerName);
                 foreach (char letter in dialogueSentence.Dialogue)
                 {
                     _dialogueText.text += letter;
@@ -136,6 +135,17 @@ namespace MainGame.Dialog
             
         }
         
+        
+        private void SetSpeakerName(string speakerName)
+        {
+            if (string.IsNullOrEmpty(speakerName))
+            {
+                _speakerNameText.gameObject.SetActive(false);
+                return;
+            }
+            
+            _speakerNameText.text = speakerName;
+        }
         
         
     }

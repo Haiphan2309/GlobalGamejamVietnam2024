@@ -1,10 +1,11 @@
 ﻿
 public struct DialogueSentence
 {
-    public string SpeakerName;
-    public string Dialogue;
+    
+    public readonly string Dialogue;
+    public readonly string SpeakerName;
 
-    public DialogueSentence(string speakerName, string dialogue)
+    public DialogueSentence(string dialogue, string speakerName = "" )
     {
         SpeakerName = speakerName;
         Dialogue = dialogue;

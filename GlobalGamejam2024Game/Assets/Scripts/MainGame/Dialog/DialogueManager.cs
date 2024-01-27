@@ -11,7 +11,7 @@ namespace MainGame.Dialog
         
         public void StartDialogue(DialogueSentence dialogueSentence, bool endLastDialogue = true)
         {
-            if (!_dialogueView.enabled) 
+            if (!_dialogueView.gameObject.activeSelf) 
                 _dialogueView.gameObject.SetActive(true);
             
             if (endLastDialogue)
@@ -22,7 +22,7 @@ namespace MainGame.Dialog
         
         public void StartDialogue(DialogueSentence [] dialogueSentences, bool endLastDialogue = true)
         {
-            if (!_dialogueView.enabled) 
+            if (!_dialogueView.gameObject.activeSelf) 
                 _dialogueView.gameObject.SetActive(true);
             
             
