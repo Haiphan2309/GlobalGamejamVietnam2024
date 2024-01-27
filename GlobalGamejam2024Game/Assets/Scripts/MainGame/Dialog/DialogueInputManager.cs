@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityUtilities;
 
-public class DialogInputManager : SingletonMonoBehaviour<DialogInputManager>
+public class DialogueInputManager : SingletonMonoBehaviour<DialogueInputManager>
 {
     private bool submitPressed = false;
     
