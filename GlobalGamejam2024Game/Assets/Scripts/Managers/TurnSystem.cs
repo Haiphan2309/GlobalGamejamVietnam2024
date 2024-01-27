@@ -25,12 +25,15 @@ namespace Level_1
                 dict[currentState].SetActive(false);
                 currentState = value;
                 dict[currentState].SetActive(true);
-                if (currentState == CharacterState.VERY_SAD) ;//lose
-                if (currentState == CharacterState.LAUGH) ;//win
+                if (currentState == CharacterState.VERY_SAD) 
+                    losePanel.SetActive(true);
+                if (currentState == CharacterState.LAUGH)
+                    winPanel.SetActive(true);
             }
         }
         [SerializeField] NPCDict dict;
         [SerializeField] GameObject idleCat, playCat, scaryCat;
+        [SerializeField] GameObject winPanel, losePanel;
 
         private void Awake()
         {
