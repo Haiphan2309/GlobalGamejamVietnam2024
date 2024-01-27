@@ -9,8 +9,8 @@ namespace GDC.Common
 {
     public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
     {
-        SoundID buttonHoverID = SoundID.BUTTON_HOVER;
-        SoundID buttonClickID = SoundID.BUTTON_CLICK;
+        SoundID buttonHoverID = SoundID.SFX_HOVER_BUTTON;
+        SoundID buttonClickID = SoundID.SFX_CLICK_BUTTON;
         public void OnPointerDown(PointerEventData eventData)
         {
             SoundManager.Instance.PlaySound(buttonClickID, 0.5f);
