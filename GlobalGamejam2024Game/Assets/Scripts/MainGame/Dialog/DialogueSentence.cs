@@ -5,8 +5,8 @@ using System;
 public struct DialogueSentence
 {
     
-    public readonly string Dialogue;
-    public readonly string SpeakerName;
+    public string Dialogue;
+    public string SpeakerName;
 
     public DialogueSentence(string dialogue, string speakerName = "" )
     {

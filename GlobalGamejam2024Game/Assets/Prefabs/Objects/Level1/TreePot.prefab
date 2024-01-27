@@ -124,5 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3059d37e234d1458b3d75b21ed6509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogName: '*'
-  dialogText: This is a tree pot
+  _dialogueSentences: []
