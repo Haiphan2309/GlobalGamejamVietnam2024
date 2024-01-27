@@ -64,6 +64,8 @@ namespace GDC.Enums
         SCARE_MASK,
         MILK,
         SOFA,
+
+
     }
     public enum CharacterState
     {

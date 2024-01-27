@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5140927091681027444}
   - component: {fileID: 5140927091681027447}
   - component: {fileID: 5140927091681027446}
-  - component: {fileID: 7716952908382355367}
   m_Layer: 0
   m_Name: Man1
   m_TagString: Untagged
@@ -145,54 +144,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueSentences: []
---- !u!114 &7716952908382355367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5140927091681027441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f0423f89d812c42a398b8aa4f1da95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateDict:
-    reorderableList:
-      canAdd: 1
-      canRemove: 1
-      draggable: 1
-      expandable: 1
-      multipleSelection: 1
-      isExpanded: 1
-      label:
-        m_Text: Keys
-        m_Image: {fileID: 0}
-        m_Tooltip: 
-      headerHeight: 18
-      footerHeight: 13
-      slideEasing: 0.15
-      verticalSpacing: 2
-      showDefaultBackground: 1
-      elementDisplayType: 0
-      elementNameProperty: 
-      elementNameOverride: 
-      elementIcon: {fileID: 0}
-    reqReferences: {fileID: 0}
-    isExpanded: 1
-    _keyValues: 000000000100000002000000030000000400000005000000
-    _keys: 000000000100000002000000030000000400000005000000
-    _values:
-    - sprite: {fileID: 21300000, guid: 5820334246c3d3740ac596f429860b2a, type: 3}
-      position: {x: 0, y: 0}
-    - sprite: {fileID: 0}
-      position: {x: 0, y: 0}
-    - sprite: {fileID: 21300000, guid: 0f13efeba7fbb0c47bb2f5ad38e22eda, type: 3}
-      position: {x: 0, y: 0}
-    - sprite: {fileID: 21300000, guid: d15f4b36a8f4c654cb870c5598ef2754, type: 3}
-      position: {x: 0, y: 0}
-    - sprite: {fileID: 21300000, guid: e5366bb3665b3f9448d262b96364ff59, type: 3}
-      position: {x: 0, y: 0}
-    - sprite: {fileID: 21300000, guid: 3179c169a51fd1142ad7753dc9dd208a, type: 3}
-      position: {x: 0, y: 0}
-  graphic: {fileID: 5140927091681027444}

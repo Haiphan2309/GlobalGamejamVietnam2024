@@ -3,10 +3,13 @@ using MainGame.Dialog;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RotaryHeart.Lib.SerializableDictionary;
+using System;
 
 namespace Level_1
 {
-
+    [Serializable]
+    public class NPCDict:SerializableDictionaryBase<CharacterState,GameObject> { }
     public class TurnSystem : MonoBehaviour
     {
         public static TurnSystem Instance { get; private set; }
@@ -17,12 +20,17 @@ namespace Level_1
             get => currentState;
             set
             {
-                NPC.Instance.CurrentState = value;
+                if (currentState == value)
+                    return;
+                dict[currentState].SetActive(false);
                 currentState = value;
+                dict[currentState].SetActive(true);
                 if (currentState == CharacterState.VERY_SAD) ;//lose
                 if (currentState == CharacterState.LAUGH) ;//win
             }
         }
+        [SerializeField] NPCDict dict;
+        [SerializeField] GameObject idleCat, playCat, scaryCat;
 
         private void Awake()
         {
@@ -151,10 +159,14 @@ namespace Level_1
             {
                 CurrentState = ((currentState < CharacterState.LITTLE_SAD)) ? (currentState + 2) : CharacterState.LITTLE_HAPPY;
                 catExist = true;
+                idleCat.SetActive(true);
                 DialogueManager.Instance.StartDialogue("STORY TELLER", "A wild cat senses the smell.\nThe man wants to adopt the cat but the cat seems not human-oriented so the man feels bored.");
             }
             else
             {
+                idleCat.SetActive(true);
+                playCat.SetActive(false);
+                scaryCat.SetActive(false);
                 CurrentState--;
                 DialogueManager.Instance.StartDialogue("STORY TELLER", "The cat sees the food but it doesn't seem hungry.\nThe man feels worried.");
             }
@@ -182,6 +194,9 @@ namespace Level_1
             else
             {
                 CurrentState = ((currentState < CharacterState.NORMAL)) ? (currentState + 2) : CharacterState.LAUGH;
+                idleCat.SetActive(false);
+                playCat.SetActive(true);
+                scaryCat.SetActive(false);
                 if (currentState == CharacterState.LAUGH)
                     DialogueManager.Instance.StartDialogue("STORY TELLER", "The cat sees the wool roll and plays with it happily.\nThe man feels amazing.");
                 else
@@ -198,6 +213,9 @@ namespace Level_1
             }
             else
             {
+                idleCat.SetActive(false);
+                playCat.SetActive(false);
+                scaryCat.SetActive(true);
                 CurrentState = ((currentState > CharacterState.LITTLE_SAD)) ? CharacterState.LITTLE_SAD : CharacterState.VERY_SAD;
                 if (currentState == CharacterState.LITTLE_SAD)
                     DialogueManager.Instance.StartDialogue("STORY TELLER", "The cat looks terrified when it sees the mask.\nThe man feels worried.");
@@ -213,10 +231,14 @@ namespace Level_1
             {
                 CurrentState = CharacterState.LITTLE_HAPPY;
                 catExist = true;
+                idleCat.SetActive(true);
                 DialogueManager.Instance.StartDialogue("STORY TELLER", "A wild cat senses the smell.\nThe man wants to adopt the cat but the cat seems not human-oriented so the man feels bored.");
             }
             else
             {
+                idleCat.SetActive(true);
+                playCat.SetActive(false);
+                scaryCat.SetActive(false);
                 CurrentState--;
                 DialogueManager.Instance.StartDialogue("STORY TELLER", "The cat sees the food but it doesn't seem hungry.\nThe man feels worried.");
             }
@@ -231,6 +253,9 @@ namespace Level_1
             }
             else
             {
+                idleCat.SetActive(false);
+                playCat.SetActive(true);
+                scaryCat.SetActive(false);
                 CurrentState = ((currentState >= CharacterState.NORMAL)) ? CharacterState.LITTLE_SAD : currentState - 1;
                 if (currentState == CharacterState.LITTLE_SAD)
                     DialogueManager.Instance.StartDialogue("STORY TELLER", "The cat tears the sofa.\nThe room turns into a mess.\n The man feed disappointed.");
