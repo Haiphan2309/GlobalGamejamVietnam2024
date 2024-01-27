@@ -8,6 +8,9 @@ namespace MainGame.Dialog
         
         [SerializeField] private DialogueView _dialogueView;
         
+        
+        
+        
         public void StartDialogue(string speakerName, string dialogue)
         {
             _dialogueView.gameObject.SetActive(true);
@@ -17,7 +20,7 @@ namespace MainGame.Dialog
         public void EndDialogue()
         {
             _dialogueView.gameObject.SetActive(false);
-            _dialogueView.EndDialogue();
+            
         }
         
         
