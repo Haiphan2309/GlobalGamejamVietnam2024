@@ -1,19 +1,32 @@
 ﻿
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityUtilities;
-
 
 public class DialogInputManager : SingletonMonoBehaviour<DialogInputManager>
 {
+    private bool submitPressed = false;
     
-    public bool GetSubmitPressed()
+    public void SubmitPressed(InputAction.CallbackContext context)
     {
-        return Input.GetMouseButtonDown(0);
+        if (context.performed)
+        {
+            submitPressed = true;
+        }
+        else if (context.canceled)
+        {
+            submitPressed = false;
+        } 
+    }
+    public bool GetSubmitPressed() 
+    {
+        bool result = submitPressed;
+        submitPressed = false;
+        return result;
     }
     
-    
-    public bool RegisterSubmitPressed()
+    public void RegisterSubmitPressed() 
     {
-        return Input.GetMouseButtonDown(0);
+        submitPressed = false;
     }
 }
