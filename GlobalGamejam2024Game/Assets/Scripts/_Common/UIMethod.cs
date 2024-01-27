@@ -28,6 +28,10 @@ namespace GDC.Common
         {
             print("BACK");
         }
+        public void EnterLevel(int level)
+        {
+            print("ENTER LEVEL " + level);
+        }
         public void CreditButton(RectTransform creditPanel)
         {
             creditPanel.DOLocalMoveX(0, 0.5f);
