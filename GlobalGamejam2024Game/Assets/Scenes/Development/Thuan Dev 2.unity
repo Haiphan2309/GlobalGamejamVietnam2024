@@ -313,7 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 2043717553}
   m_Horizontal: 1
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 749617284}
   m_HandleRect: {fileID: 749617283}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1545,7 +1545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0358c87eb46267b44a197f431b8b79e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardInfoView: {fileID: 967738487}
+  _cardInfoView: {fileID: 967738487}
+  _delayBeforeShowingCardInfo: 1
 --- !u!1 &2121221032
 GameObject:
   m_ObjectHideFlags: 0
