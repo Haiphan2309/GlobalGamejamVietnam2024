@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class ObjectInteract : MonoBehaviour
 {
-    [SerializeField] string dialogName, dialogText;
+    [SerializeField] private DialogueSentence[] _dialogueSentences;
+    
     private void OnMouseEnter()
     {
         DOTween.Kill(transform);
@@ -23,6 +24,7 @@ public class ObjectInteract : MonoBehaviour
         {
             transform.DOScale(1, 0.15f);
         });
-        DialogueManager.Instance.StartDialogue( dialogText,dialogName);
+        
+        DialogueManager.Instance.StartDialogue( _dialogueSentences, true);
     }
 }
