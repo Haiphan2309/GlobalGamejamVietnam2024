@@ -23,6 +23,6 @@ public class ObjectInteract : MonoBehaviour
         {
             transform.DOScale(1, 0.15f);
         });
-        DialogueManager.Instance.StartDialogue(dialogName, dialogText);
+        DialogueManager.Instance.StartDialogue( dialogText,dialogName);
     }
 }

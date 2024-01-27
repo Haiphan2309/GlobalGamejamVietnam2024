@@ -11,6 +11,8 @@ namespace MainGame
         [SerializeField] private SO_NPC _soNpc;
 
         [SerializeField] private CardHandSystem cardHandSystem;
+        
+        
         private void Awake()
         {
 
@@ -35,7 +37,7 @@ namespace MainGame
         {
             
             var dialogueSentence = new DialogueSentence(cardSo.Dialogue, _soNpc.Name);
-            DialogueManager.Instance.StartDialogue(dialogueSentence);
+            DialogueManager.Instance.StartDialogue(dialogueSentence, true);
             
             cardHandSystem.Hide();
             

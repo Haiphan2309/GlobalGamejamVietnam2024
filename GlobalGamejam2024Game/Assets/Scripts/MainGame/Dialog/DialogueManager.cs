@@ -9,6 +9,11 @@ namespace MainGame.Dialog
         [SerializeField] private DialogueView _dialogueView;
         
         
+        
+        public void StartDialogue(string dialog, string speakerName, bool endLastDialogue = true)
+        {
+            StartDialogue(new DialogueSentence(dialog, speakerName), endLastDialogue );
+        }
         public void StartDialogue(DialogueSentence dialogueSentence, bool endLastDialogue = true)
         {
             if (!_dialogueView.gameObject.activeSelf) 
@@ -41,7 +46,7 @@ namespace MainGame.Dialog
             _dialogueView.gameObject.SetActive(false);
             
         }
-        
-        
+
+
     }
 }
