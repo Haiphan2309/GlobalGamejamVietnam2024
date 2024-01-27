@@ -215,8 +215,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
       value: A picture of a dog.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -316,8 +320,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
       value: An interesting wool roll.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -555,8 +563,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
       value: A kind of sliding window, with the outside wind gently blowing in.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -745,8 +757,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
       value: A picture of a mouse.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -850,8 +866,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
       value: Nice chair!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -997,8 +1017,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
       value: A picture of a penguin.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -1102,8 +1126,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
       value: A very soft sofa.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -1202,11 +1230,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
       value: A dictionary of animals lying on the floor, its pages featuring cat
         illustrations adorned with heart shapes, while the pages with dog pictures
         are marked with scribbles and brackets around the dog images, some even torn
         and damaged.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -1307,11 +1339,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: _dialogueSentences.Array.data[0].Dialogue
-      value: CAT
+      value: Meow~~~
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: _dialogueSentences.Array.data[0].SpeakerName
-      value: Meow~~~
+      value: CAT
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -1565,11 +1597,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: _dialogueSentences.Array.data[0].Dialogue
-      value: CAT
+      value: MEOOOOWW!!!
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: _dialogueSentences.Array.data[0].SpeakerName
-      value: MEOOOOWW!!!
+      value: CAT
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -1714,8 +1746,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
       value: A picture of a cat.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -1809,6 +1845,14 @@ PrefabInstance:
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: dialogText
       value: A creepy mask covered with dust
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: A creepy mask covered with dust.
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -1919,11 +1963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: _dialogueSentences.Array.data[0].Dialogue
-      value: CAT
+      value: Meow!
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: _dialogueSentences.Array.data[0].SpeakerName
-      value: Meow!
+      value: CAT
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
@@ -2082,8 +2126,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
       value: A small plant pot emits a quite pleasant scent.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
