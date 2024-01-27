@@ -9,15 +9,34 @@ namespace MainGame.Dialog
         [SerializeField] private DialogueView _dialogueView;
         
         
-        
-        
-        public void StartDialogue(string speakerName, string dialogue)
+        public void StartDialogue(DialogueSentence dialogueSentence, bool endLastDialogue = true)
         {
-            _dialogueView.gameObject.SetActive(true);
-            _dialogueView.StartDialogue(speakerName, dialogue);
+            if (!_dialogueView.enabled) 
+                _dialogueView.gameObject.SetActive(true);
+            
+            if (endLastDialogue)
+                _dialogueView.ForceEndDialogue();
+            
+            _dialogueView.AddDialogue(dialogueSentence);
         }
         
-        public void EndDialogue()
+        public void StartDialogue(DialogueSentence [] dialogueSentences, bool endLastDialogue = true)
+        {
+            if (!_dialogueView.enabled) 
+                _dialogueView.gameObject.SetActive(true);
+            
+            
+            if (endLastDialogue)
+                _dialogueView.ForceEndDialogue();
+            
+            foreach (var dialogueSentence in dialogueSentences)
+            {
+                _dialogueView.AddDialogue(dialogueSentence);
+            }
+            
+        }
+        
+        public void ForceEndDialogue()
         {
             _dialogueView.gameObject.SetActive(false);
             

@@ -33,7 +33,9 @@ namespace MainGame
         
         public void UseCard(CardController cardController, SO_Card cardSo)
         {
-            DialogueManager.Instance.StartDialogue(_soNpc.Name , cardSo.Dialogue);
+            
+            var dialogueSentence = new DialogueSentence(_soNpc.Name, cardSo.Dialogue);
+            DialogueManager.Instance.StartDialogue(dialogueSentence);
             
             cardHandSystem.Hide();
             
@@ -41,7 +43,9 @@ namespace MainGame
 
         public void EndDialogue()
         {
-            DialogueManager.Instance.EndDialogue();
+            
+            
+            DialogueManager.Instance.ForceEndDialogue();
             
             cardHandSystem.Show();
         }

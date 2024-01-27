@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,21 +24,35 @@ namespace MainGame.Dialog
         
         private Coroutine _typeSentenceCoroutine;
         private bool _isSkipDialogue = false;
+        private bool _isRunning = false;
         
+        private Queue<DialogueSentence> _dialogueQueue = new();
         
         private void Awake()
         {
             _dialogueText.text = "";
             _speakerNameText.text = "";
             
-            _nextButton.onClick.AddListener(EndDialogue);
+            _nextButton.onClick.AddListener(NextDialogue);
             
         }
         
         
-        public void StartDialogue( string speakerName, string dialogue)
+        
+        public void AddDialogue(DialogueSentence dialogueSentence)
         {
-            _speakerNameText.text = speakerName;
+            _dialogueQueue.Enqueue(dialogueSentence);
+            
+            if (!_isRunning)
+            {
+                StartDialogue();
+            }
+        }
+        
+        
+        public void StartDialogue()
+        {
+            _speakerNameText.text = "";
             _dialogueText.text = "";
             
             _isSkipDialogue = false;
@@ -45,11 +60,11 @@ namespace MainGame.Dialog
             OnDialogueStart?.Invoke();
             
             
-            _typeSentenceCoroutine = StartCoroutine(TypeSentence(dialogue));            
+            _typeSentenceCoroutine = StartCoroutine(nameof(TypeSentence));            
             
         }
-        
-        public void EndDialogue()
+
+        private void NextDialogue()
         {
             if (!_isSkipDialogue)
             {
@@ -71,31 +86,53 @@ namespace MainGame.Dialog
             GameLoopManager.Instance.EndDialogue();
         }
         
+        public void ForceEndDialogue()
+        {
+            if (_typeSentenceCoroutine != null)
+            {
+                StopCoroutine(_typeSentenceCoroutine);
+            }
+            
+            _dialogueText.text = "";
+            _speakerNameText.text = "";
+            
+            OnDialogueEnd?.Invoke();
+            
+            GameLoopManager.Instance.EndDialogue();
+        }
         
-        private IEnumerator TypeSentence(string sentence)
+        private IEnumerator TypeSentence()
         {
             
             yield return new WaitForSeconds(_textDelay);
             
             int characterCount = 0;
-            
-            foreach (char letter in sentence.ToCharArray())
+            while (_dialogueQueue.Count > 0)
             {
-                _dialogueText.text += letter;
-        
-                characterCount++;
+                _isSkipDialogue = false;
+                var dialogueSentence = _dialogueQueue.Dequeue();
                 
-                if (characterCount >= _characterSkip)
+                
+                _speakerNameText.text = dialogueSentence.SpeakerName;
+                foreach (char letter in dialogueSentence.Dialogue)
                 {
-                    OnCharacterDisplay?.Invoke();
-                    characterCount = 0;
-                }
+                    _dialogueText.text += letter;
+        
+                    characterCount++;
                 
-                if (!_isSkipDialogue) 
-                    yield return new WaitForSeconds(_textSpeed);
+                    if (characterCount >= _characterSkip)
+                    {
+                        OnCharacterDisplay?.Invoke();
+                        characterCount = 0;
+                    }
+                
+                    if (!_isSkipDialogue) 
+                        yield return new WaitForSeconds(_textSpeed);
+                }
+            
+                _isSkipDialogue = true;
             }
             
-            _isSkipDialogue = true;
             
         }
         
