@@ -11,12 +11,19 @@ namespace GDC.Common
     {
         [SerializeField] Image gameOverPanel;
         [SerializeField] RectTransform gameOverText, backButton;
+        [SerializeField] GameObject vfx_WinGame;
         void Start()
         {
             gameOverPanel.DOColor(new(0, 0, 0, 0.4f), 1).OnComplete(() => 
             {
-                gameOverText.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutBounce);
-                backButton.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutBounce);
+                float delay = 0f;
+                if (vfx_WinGame != null)
+                {
+                    delay = 0.3f;
+                    vfx_WinGame.SetActive(true);
+                }
+                gameOverText.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutBounce).SetDelay(delay);
+                backButton.DOLocalMoveX(0, 0.5f).SetEase(Ease.OutBounce).SetDelay(delay);
             });
         }
     }

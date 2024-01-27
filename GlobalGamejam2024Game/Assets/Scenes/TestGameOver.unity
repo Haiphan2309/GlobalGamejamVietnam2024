@@ -134,6 +134,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 3634009222989385962, guid: f6df9796becd72f4b8b7414b81f650f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894058206591815179, guid: f6df9796becd72f4b8b7414b81f650f9, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4894058206591815179, guid: f6df9796becd72f4b8b7414b81f650f9, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012331714564921888, guid: f6df9796becd72f4b8b7414b81f650f9, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1581735582}
     - target: {fileID: 7867758028704641051, guid: f6df9796becd72f4b8b7414b81f650f9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -366,3 +382,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7721659556054723341
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 493380203579752944, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_Name
+      value: Win Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 493380203579752944, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112683097769500143, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112683097769500143, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -999498807
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8158604630708931386, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1581735582}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ea700cd39967a414cac8faca891deaf0, type: 3}

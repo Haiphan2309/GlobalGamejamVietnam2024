@@ -9,6 +9,7 @@ namespace GDC.Common
 {
     public class UIMethod : MonoBehaviour
     {
+        // [SerializeField] RectTransform creditPanel;
         public void PointerEnterButton()
         {
             // SoundManager.Instance.PlaySound(SoundID.SFX_HOVER_BUTTON);
@@ -26,6 +27,16 @@ namespace GDC.Common
         public void BackToMainMenu()
         {
             print("BACK");
+        }
+        public void CreditButton(RectTransform creditPanel)
+        {
+            creditPanel.DOLocalMoveX(0, 0.5f);
+        }
+        public void CreditButtonExit(RectTransform creditPanel)
+        {
+            creditPanel.DOLocalMoveX(-2000, 0.5f).OnComplete(() => 
+                creditPanel.transform.localPosition = new Vector3(2000, 0, 0)
+            );
         }
     }
 }
