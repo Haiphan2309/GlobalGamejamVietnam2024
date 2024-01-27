@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CardHoverInfoProvider : MonoBehaviour/*, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler*/
+public class CardHoverInfoProvider : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private CardInfoController cardInfoController;
 
@@ -24,8 +24,7 @@ public class CardHoverInfoProvider : MonoBehaviour/*, IPointerEnterHandler, IPoi
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        cardInfoController.ShowCardInfo(_cardSo.Description);
-        Debug.Log("Cursor Entering " + name + " GameObject");
+        cardInfoController.ShowCardInfo(_cardSo);
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -33,8 +32,5 @@ public class CardHoverInfoProvider : MonoBehaviour/*, IPointerEnterHandler, IPoi
         cardInfoController.HideCardInfo();
     }
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log("Clicked on " + name + " GameObject");
-    }
+    
 }

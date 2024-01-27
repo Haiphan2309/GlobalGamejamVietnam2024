@@ -8,9 +8,9 @@ public class CardInfoController : MonoBehaviour
     [SerializeField] private float _delayBeforeShowingCardInfo = 2;
 
     private Coroutine delay;
-    public void ShowCardInfo(string cardEffectDescription)
+    public void ShowCardInfo(SO_Card cardSo)
     {
-        delay = StartCoroutine(ShowCardInfoCoroutine(cardEffectDescription));
+        delay = StartCoroutine(ShowCardInfoCoroutine(cardSo));
     }
     
     public void HideCardInfo()
@@ -20,11 +20,11 @@ public class CardInfoController : MonoBehaviour
         _cardInfoView.gameObject.SetActive(false);
     }
     
-    IEnumerator ShowCardInfoCoroutine(string cardEffectDescription)
+    IEnumerator ShowCardInfoCoroutine(SO_Card cardSo)
     {
         yield return new WaitForSeconds(_delayBeforeShowingCardInfo);
         _cardInfoView.gameObject.SetActive(true);
-        _cardInfoView.LoadInfo(cardEffectDescription);
+        _cardInfoView.LoadInfo(cardSo);
     }
     
     
