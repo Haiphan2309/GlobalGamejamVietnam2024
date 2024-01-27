@@ -4,13 +4,12 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Shun_Card_System
+namespace Shun_Draggable_System
 {
     [RequireComponent(typeof(Collider2D))]
-    public class BaseDraggableObject : MonoBehaviour, IMouseDraggable, IMouseHoverable
+    public class BaseDraggable : MonoBehaviour, IDraggable, IHoverable
     {
-        public Action<BaseDraggableObject> OnDestroy { get; set; }
-        protected BaseDraggableObjectMouseInput MouseInput;
+        protected BaseDraggableMouseInput MouseInput;
         public bool IsDestroyed { get; protected set; }
         public bool IsDraggable = true; 
         public bool IsDragging { get; private set; }
@@ -21,10 +20,20 @@ namespace Shun_Card_System
         [SerializeField] protected bool ActivateOnValidate = false;
 
         
+        public Action<BaseDraggable> OnDestroy { get; set; }
+        public Action OnStartDrag { get; set; }
+        public Action OnEndDrag { get; set; }
+        public Action OnStartHover { get; set; }
+        public Action OnEndHover { get; set; }
+        public Action OnDisableInteractable { get; set; }
+        public Action OnEnableInteractable { get; set; }
+        
         public virtual bool StartDrag()
         {
             if (!IsDraggable) return false;
             IsDragging = true;
+            
+            OnStartDrag?.Invoke();
             return true;
         }
 
@@ -32,6 +41,8 @@ namespace Shun_Card_System
         {
             if (!IsDraggable) return false;
             IsDragging = false;
+            
+            OnEndDrag?.Invoke();
             return true;
         }
         
@@ -48,11 +59,15 @@ namespace Shun_Card_System
         public virtual void StartHover()
         {
             IsHovering = true;
+            
+            OnStartHover?.Invoke();
         }
 
         public virtual void EndHover()
         {
             IsHovering = false;
+            
+            OnEndHover?.Invoke();
         }
         
         public virtual void DisableDrag()
@@ -68,12 +83,12 @@ namespace Shun_Card_System
             IsDraggable = true;
         }
 
-        public void SetMouseInput(BaseDraggableObjectMouseInput mouseInput)
+        public void SetMouseInput(BaseDraggableMouseInput mouseInput)
         {
             MouseInput = mouseInput;
         }
         
-        public void RemoveMouseInput(BaseDraggableObjectMouseInput mouseInput)
+        public void RemoveMouseInput(BaseDraggableMouseInput mouseInput)
         {
             MouseInput = null;    
         }
