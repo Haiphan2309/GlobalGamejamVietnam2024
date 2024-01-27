@@ -15,7 +15,7 @@ namespace GDC.Managers
         public static SoundManager Instance {get; private set;}
         [SerializeField] GameObject sfxPrefab;        
         [SerializeField] SoundMapConfig soundMapConfig;
-        [SerializeField] int numberOfDefaultSFX = 8;
+        [SerializeField] int numberOfDefaultSFX = 100;
 
         [Space(10)]
         [SerializeField] float sfxVolume;
@@ -116,6 +116,14 @@ namespace GDC.Managers
 //                 TriggerDisableMusic();
 //             }
 // #endif
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                PlaySound(SoundID.CLICK_OBJECT);
+            }
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                PlaySound(SoundID.SFX_CLICK_BUTTON);
+            }
         }
 
         void TriggerDisableMusic()
@@ -760,7 +768,7 @@ namespace GDC.Managers
 
         private void LoadCommonSoundMaps()
         {
-            LoadSoundMap(SoundType.MAIN_MENU);
+            // LoadSoundMap(SoundType.MAIN_MENU);
             LoadSoundMap(SoundType.COMMON);
         }
 
