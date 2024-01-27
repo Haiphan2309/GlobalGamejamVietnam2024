@@ -1,6 +1,6 @@
-﻿namespace Shun_Card_System
+﻿namespace Shun_Draggable_System
 {
-    public interface IMouseDraggable
+    public interface IDraggable
     {
         public bool IsDragging { get; }
         public bool StartDrag();

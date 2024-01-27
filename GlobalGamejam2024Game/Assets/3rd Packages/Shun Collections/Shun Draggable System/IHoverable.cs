@@ -1,6 +1,6 @@
-﻿namespace Shun_Card_System
+﻿namespace Shun_Draggable_System
 {
-    public interface IMouseHoverable
+    public interface IHoverable
     {
         public bool IsHovering { get;}
         public void StartHover();
