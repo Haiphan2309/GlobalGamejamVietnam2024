@@ -23,5 +23,9 @@ namespace GDC.Common
         {
             print("START");
         }
+        public void BackToMainMenu()
+        {
+            print("BACK");
+        }
     }
 }
