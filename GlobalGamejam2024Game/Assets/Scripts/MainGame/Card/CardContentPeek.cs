@@ -17,13 +17,13 @@ namespace MainGame.Card
         public void OnPointerEnter(PointerEventData eventData)
         {
             _moveTween.Kill();
-            _moveTween = _peekTransform.DOMove(_showTransform.position, _moveDuration).SetEase(_moveEase);
+            _moveTween = _peekTransform.DOMoveY(_showTransform.position.y, _moveDuration).SetEase(_moveEase);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             _moveTween.Kill();
-            _moveTween = _peekTransform.DOMove(_hideTransform.position, _moveDuration).SetEase(_moveEase);
+            _moveTween = _peekTransform.DOMoveY(_hideTransform.position.y, _moveDuration).SetEase(_moveEase);
         }
     }
 }
