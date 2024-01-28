@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using RotaryHeart.Lib.SerializableDictionary;
 using System;
+using AudioPlayer;
+using GDC.Managers;
 using MainGame;
 using MainGame.Happy;
 
@@ -44,6 +46,8 @@ namespace Level_1
         {
             Instance = this;
             
+            
+            SoundManager.Instance.PlaySound(SoundID.MUSIC_GAMEPLAY);
         }
 
         private void Start()

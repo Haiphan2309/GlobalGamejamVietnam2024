@@ -1,4 +1,6 @@
-﻿using DG.Tweening;
+﻿using AudioPlayer;
+using DG.Tweening;
+using GDC.Managers;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -24,7 +26,8 @@ namespace MainGame.Card
             {
                 return;
             }
-            
+
+            SoundManager.Instance.PlaySound(SoundID.HOVER_CARD);
             _moveTween?.Kill();
             _moveTween = _moveRectTransform.DOMoveY(_showTransform.position.y, _moveDuration).SetEase(_moveEase);
         }
@@ -35,6 +38,7 @@ namespace MainGame.Card
             {
                 return;
             }
+            
             
             _moveTween?.Kill();
             _moveTween = _moveRectTransform.DOMoveY(_peakTransform.position.y, _moveDuration).SetEase(_moveEase);

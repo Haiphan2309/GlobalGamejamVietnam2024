@@ -1,4 +1,6 @@
 ﻿using System;
+using AudioPlayer;
+using GDC.Managers;
 using MainGame.Dialog;
 using UnityEngine;
 using UnityUtilities;
@@ -36,12 +38,18 @@ namespace MainGame
         {
             IsHandActive = true;
             cardHandController.Show();
+            
+            
+            SoundManager.Instance.PlaySound(SoundID.SFX_TRANSITION_IN);
         }
         
         public void Hide()
         {
             IsHandActive = false;
             cardHandController.Hide();
+            
+            
+            SoundManager.Instance.PlaySound(SoundID.SFX_TRANSITION_OUT);
         }
 
         

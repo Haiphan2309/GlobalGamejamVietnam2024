@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using AudioPlayer;
+using GDC.Managers;
 using Level_1;
 using Level_2;
 using MainGame;
@@ -50,6 +52,9 @@ public class CardController : MonoBehaviour
     
     private void UseCard()
     {
+        
+        SoundManager.Instance.PlaySound(SoundID.CLICK_CARD);
+        
         StartCoroutine(nameof(UseCardCoroutine));
     }
 

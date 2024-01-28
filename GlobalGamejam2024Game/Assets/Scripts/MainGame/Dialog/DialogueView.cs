@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using AudioPlayer;
 using DG.Tweening;
+using GDC.Managers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -136,7 +138,6 @@ namespace MainGame.Dialog
         
         private IEnumerator TypeSentence()
         {
-            
             yield return new WaitForSeconds(_textDelay);
             
             int characterCount = 0;

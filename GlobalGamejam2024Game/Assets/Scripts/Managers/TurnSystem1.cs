@@ -4,6 +4,8 @@ using MainGame;
 using MainGame.Dialog;
 using MainGame.Happy;
 using System.Collections;
+using AudioPlayer;
+using GDC.Managers;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -37,6 +39,9 @@ namespace Level_2
         {
             Instance = this;
 
+            
+            SoundManager.Instance.PlaySound(SoundID.MUSIC_GAMEPLAY);
+            
         }
 
         private void Start()
