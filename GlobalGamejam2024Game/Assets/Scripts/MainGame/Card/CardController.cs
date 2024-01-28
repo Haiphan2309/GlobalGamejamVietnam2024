@@ -65,7 +65,7 @@ public class CardController : MonoBehaviour
         
         cardHandSystem.EnableAllCards();
         cardHandSystem.RemoveCard(this);
-        
+        _cardHoverInfoProvider.HideCardInfo();
         Destroy(gameObject);
     }
 

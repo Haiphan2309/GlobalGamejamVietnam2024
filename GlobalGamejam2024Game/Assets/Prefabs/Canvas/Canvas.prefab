@@ -2130,6 +2130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 7264099583024673885, guid: d2cdfb3c374cd8447bc8e74e4f0d9ec3, type: 3}
+      propertyPath: cardHandSystem
+      value: 
+      objectReference: {fileID: 7222510451810307412}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2cdfb3c374cd8447bc8e74e4f0d9ec3, type: 3}
 --- !u!4 &7356014319222420546 stripped
