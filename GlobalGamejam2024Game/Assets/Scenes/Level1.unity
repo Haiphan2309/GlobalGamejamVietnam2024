@@ -2755,6 +2755,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b4bfa7c477aab4418b577310c07924e, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b02f2da924d7a248a7e8cb4c090a88f, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: e7946256ac23ab74d9ad39ed21828531, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 169eb1c5ccad9cf448b16068d5c48283, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 72fc3f1e1f1fe184ea11b18b33a272b2, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: dedb1e45471e67b48a10006aade0912c, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8038cd20a184ed14996b2f7a7df08912, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: a49d0aee8973ec74f93a2522ce46c31f, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: a3387d1528850184289062532922eac5, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: f411b307de4d5b547911c5e9813e635a, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: baa480d7124dd2246b3b2758cab6c7ab, type: 2}
+    - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _soCards.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9f7a99a3170d8be42b41c49c02177da4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
 --- !u!4 &1974428492 stripped

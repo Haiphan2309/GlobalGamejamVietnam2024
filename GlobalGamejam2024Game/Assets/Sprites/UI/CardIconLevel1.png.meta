@@ -108,10 +108,10 @@ TextureImporter:
       name: CardIconLevel1_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 102
-        width: 24
-        height: 37
+        x: 0
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: CardIconLevel1_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 102
-        width: 24
-        height: 37
+        x: 32
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: CardIconLevel1_2
       rect:
         serializedVersion: 2
-        x: 68
-        y: 102
-        width: 24
-        height: 37
+        x: 64
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: CardIconLevel1_3
       rect:
         serializedVersion: 2
-        x: 100
-        y: 102
-        width: 24
-        height: 37
+        x: 96
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: CardIconLevel1_4
       rect:
         serializedVersion: 2
-        x: 4
-        y: 65
-        width: 24
-        height: 12
+        x: 0
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: CardIconLevel1_5
       rect:
         serializedVersion: 2
-        x: 38
-        y: 61
-        width: 19
-        height: 23
+        x: 32
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: CardIconLevel1_6
       rect:
         serializedVersion: 2
-        x: 74
-        y: 56
-        width: 11
-        height: 29
+        x: 64
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,10 +255,10 @@ TextureImporter:
       name: CardIconLevel1_7
       rect:
         serializedVersion: 2
-        x: 101
-        y: 59
-        width: 22
-        height: 26
+        x: 96
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,10 +276,10 @@ TextureImporter:
       name: CardIconLevel1_8
       rect:
         serializedVersion: 2
-        x: 6
-        y: 16
-        width: 22
-        height: 20
+        x: 0
+        y: 0
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +297,10 @@ TextureImporter:
       name: CardIconLevel1_9
       rect:
         serializedVersion: 2
-        x: 39
-        y: 14
-        width: 18
-        height: 21
+        x: 32
+        y: 0
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,10 +318,10 @@ TextureImporter:
       name: CardIconLevel1_10
       rect:
         serializedVersion: 2
-        x: 70
-        y: 13
-        width: 22
-        height: 24
+        x: 64
+        y: 0
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,10 +339,10 @@ TextureImporter:
       name: CardIconLevel1_11
       rect:
         serializedVersion: 2
-        x: 99
-        y: 13
-        width: 27
-        height: 20
+        x: 96
+        y: 0
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
