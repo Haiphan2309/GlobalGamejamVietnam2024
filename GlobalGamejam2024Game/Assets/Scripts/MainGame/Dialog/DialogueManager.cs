@@ -71,6 +71,7 @@ namespace MainGame.Dialog
             IsDialogActive = true;
 
             _dialogueView.Show();
+            
         }
         
         public void Hide()
@@ -78,6 +79,8 @@ namespace MainGame.Dialog
             IsDialogActive = false;
             
             _dialogueView.Hide();
+            
+            
         }
 
     }

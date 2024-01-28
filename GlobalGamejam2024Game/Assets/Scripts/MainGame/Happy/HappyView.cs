@@ -18,6 +18,7 @@ public class HappyView : MonoBehaviour
     // Callback to be invoked when the timer completes
     public Action OnFillComplete;
 
+    Tween _moveTween;
     
     public void Initialize(float maxPercent = 1, float currentPercent = 0, Action onTimerComplete = null)
     {
@@ -25,7 +26,7 @@ public class HappyView : MonoBehaviour
         _currentPercent = currentPercent < 0 ? _currentPercent : Mathf.Min(currentPercent,maxPercent);
         OnFillComplete = onTimerComplete;
         
-        MoveSlider(_currentPercent, _maxPercent);
+        MoveSlider(currentPercent, currentPercent);
     }
         
     
@@ -38,19 +39,20 @@ public class HappyView : MonoBehaviour
 
     private void MoveSlider(float startTime, float endTime)
     {
+        _moveTween?.Kill();
         
         _slider.value = _currentPercent / _maxPercent;
 
         // Use OnComplete callback to trigger actions when the animation completes
-        _slider.DOValue(endTime / _maxPercent,( (endTime - startTime)/(endTime*_moveAnimationSpeed)))
+        _moveTween = _slider.DOValue(endTime / _maxPercent,( (endTime - startTime)/(endTime*_moveAnimationSpeed)))
             .OnComplete(() =>
             {
                 // Optionally, you can perform additional actions here
                 OnFillComplete?.Invoke();
                 
-                
                 _currentPercent = endTime;
             });
+        
     }
     
     

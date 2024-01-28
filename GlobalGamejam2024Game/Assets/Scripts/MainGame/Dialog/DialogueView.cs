@@ -117,15 +117,17 @@ namespace MainGame.Dialog
         public void Show()
         {
             _moveTween?.Kill();
+            _dialogueView.gameObject.SetActive(true);
             _moveTween = _dialogueView.DOAnchorPos(_showTransform.anchoredPosition, _moveDuration).SetEase(_moveEase);
         }
-        
+
         public void Hide()
         {
             _moveTween?.Kill();
-            _moveTween = _dialogueView.DOAnchorPos(_hideTransform.anchoredPosition, _moveDuration).SetEase(_moveEase);
+            _moveTween = _dialogueView.DOAnchorPos(_hideTransform.anchoredPosition, _moveDuration).SetEase(_moveEase)
+                .OnComplete(() => _dialogueView.gameObject.SetActive(false)
+                );
         }
-        
         
         
         private IEnumerator TypeSentence()
