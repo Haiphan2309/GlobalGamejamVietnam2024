@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using AudioPlayer;
+using GDC.Managers;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -25,6 +27,9 @@ public class CardHoverInfoProvider : MonoBehaviour, IPointerEnterHandler, IPoint
     public void OnPointerEnter(PointerEventData eventData)
     {
         _cardInfoController.ShowCardInfo(_cardSo);
+        
+        
+        SoundManager.Instance.PlaySound(SoundID.HOVER_CARD);
     }
 
     public void OnPointerExit(PointerEventData eventData)
