@@ -23,6 +23,7 @@ namespace Level_2
             {
                 if (currentState == value)
                     return;
+                
                 ScoreManager.Instance.InitializeHappy((int)currentState * 0.2f);
                 dict[currentState].SetActive(false);
                 currentState = value;

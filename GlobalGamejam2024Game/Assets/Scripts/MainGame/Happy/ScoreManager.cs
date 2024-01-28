@@ -30,14 +30,7 @@ namespace MainGame.Happy
             InitializeHappy(0);
             InitializeCounter(_cardUseCounter);
         }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                IncreaseHappy(0.2f);
-            }
-        }
+        
 
         public void InitializeHappy(float initialHappyValue, float maxHappyValue = 1)
         {
@@ -45,6 +38,12 @@ namespace MainGame.Happy
 
             _happyView.Initialize(maxHappyValue,initialHappyValue);
             
+        }
+        
+        public void UpdateHappy(float oldValue, float newValue)
+        {
+            _happyValue = newValue;
+            _happyView.AddValue(newValue - oldValue);
         }
         
         public void IncreaseHappy(float happyValue)
