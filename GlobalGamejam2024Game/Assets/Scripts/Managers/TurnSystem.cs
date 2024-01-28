@@ -36,6 +36,11 @@ namespace Level_1
                 ScoreManager.Instance.InitializeHappy((int)currentState * 0.2f);
                 dict[currentState].SetActive(false);
                 currentState = value;
+                dict[currentState].SetActive(true);
+                if (currentState == CharacterState.VERY_SAD)
+                    losePanel.SetActive(true);
+                if (currentState == CharacterState.LAUGH)
+                    winPanel.SetActive(true);
             }
         }
         [SerializeField] NPCDict dict;
