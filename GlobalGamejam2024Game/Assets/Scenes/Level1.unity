@@ -1607,6 +1607,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 493380203579752944, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
   m_PrefabInstance: {fileID: 1085097537}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1085097539 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2658594561543149764, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+  m_PrefabInstance: {fileID: 1085097537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085097538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611e7dd2ab305694593a30eecc0c70d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1138321960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2608,6 +2619,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3634009222989385962, guid: f6df9796becd72f4b8b7414b81f650f9, type: 3}
   m_PrefabInstance: {fileID: 1718296422}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1718296424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1176414936151280094, guid: f6df9796becd72f4b8b7414b81f650f9, type: 3}
+  m_PrefabInstance: {fileID: 1718296422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718296423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611e7dd2ab305694593a30eecc0c70d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1783787203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2738,6 +2760,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5822724705469889729, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _winGameOver
+      value: 
+      objectReference: {fileID: 1085097539}
+    - target: {fileID: 5822724705469889729, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _loseGameOver
+      value: 
+      objectReference: {fileID: 1718296424}
     - target: {fileID: 7222510451699282133, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
       propertyPath: m_Name
       value: Canvas

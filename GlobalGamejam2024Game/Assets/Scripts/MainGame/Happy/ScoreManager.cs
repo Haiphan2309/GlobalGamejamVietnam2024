@@ -1,4 +1,5 @@
 ﻿using System;
+using GDC.Common;
 using MainGame.Counter;
 using UnityEngine;
 using UnityUtilities;
@@ -13,6 +14,9 @@ namespace MainGame.Happy
         [Header("View")]
         [SerializeField] private HappyView _happyView;
         [SerializeField] private CounterController _counterController;
+        
+        [SerializeField] private GameOver _winGameOver;
+        [SerializeField] private GameOver _loseGameOver;
         
         private int _counter;
         private float _happyValue = 0;
@@ -50,7 +54,11 @@ namespace MainGame.Happy
 
             if (_happyValue >= 1)
             {
+                
+                _winGameOver.gameObject.SetActive(true);
+                
                 OnHappyFill?.Invoke();
+                
             }
         }
         
@@ -78,6 +86,9 @@ namespace MainGame.Happy
             if (_counter < 0)
             {
                 // TODO : End Game
+                
+                _loseGameOver.gameObject.SetActive(true);
+                
                 
                 OnCounterEnd?.Invoke();
             }
