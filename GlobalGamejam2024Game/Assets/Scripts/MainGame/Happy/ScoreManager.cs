@@ -21,20 +21,32 @@ namespace MainGame.Happy
         public Action OnCounterEnd { get; set; }
         public Action OnHappyFill { get; set; }
 
-        
-        
+        private void Awake()
+        {
+            InitializeHappy(0);
+            InitializeCounter(_cardUseCounter);
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                IncreaseHappy(0.1f);
+            }
+        }
+
         public void InitializeHappy(float happyValue)
         {
             _happyValue = happyValue;
 
-            _happyView.Initialize(happyValue);
+            _happyView.Initialize(1,happyValue);
             
         }
         
         public void IncreaseHappy(float happyValue)
         {
             _happyValue += happyValue;
-            _happyView.AddValue(_happyValue);
+            _happyView.AddValue(happyValue);
 
             if (_happyValue >= 1)
             {

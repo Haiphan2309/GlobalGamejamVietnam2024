@@ -13,13 +13,13 @@ public class HappyView : MonoBehaviour
     [SerializeField] private float _moveAnimationSpeed = 0.5f;
     
     private float _currentPercent;
-    private float _maxPercent;
+    private float _maxPercent = 1;
 
     // Callback to be invoked when the timer completes
     public Action OnFillComplete;
 
     
-    public void Initialize(float maxPercent, float currentPercent = 0, Action onTimerComplete = null)
+    public void Initialize(float maxPercent = 1, float currentPercent = 0, Action onTimerComplete = null)
     {
         _maxPercent = maxPercent;
         _currentPercent = currentPercent < 0 ? _currentPercent : Mathf.Min(currentPercent,maxPercent);
