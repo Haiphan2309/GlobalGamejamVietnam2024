@@ -194,27 +194,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.x
-      value: 5.356051
+      value: 1.375
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.y
-      value: 3.6578825
+      value: 5.6875
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.01906848
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.07627404
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.3125
+      value: 1.375
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.875
+      value: 5.6875
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: dialogName
@@ -329,7 +333,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &607725756
 PrefabInstance:
@@ -344,7 +348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5140927091681027441, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5140927091681027444, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: m_Sprite
@@ -490,9 +494,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: HA HA HA HA HA!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: THE MAN
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &653647346 stripped
 GameObject:
@@ -565,27 +580,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.x
-      value: 1.5238101
+      value: 3.4375
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.y
-      value: 1.0364032
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.027472407
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Offset.y
-      value: -0.022893906
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.4375
+      value: 3.4375
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.9375
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: dialogName
@@ -680,9 +699,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: Sigh... Everyone has a pair, right?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].SpeakerName
+      value: THE MAN
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &866162099 stripped
 GameObject:
@@ -993,9 +1023,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: The man seem to be sad
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &1004595384 stripped
 GameObject:
@@ -1043,7 +1080,7 @@ Transform:
   - {fileID: 892694310}
   - {fileID: 1352229186}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1062311950
 PrefabInstance:
@@ -1062,7 +1099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6456379221705531649, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1111,53 +1148,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 493380203579752944, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
   m_PrefabInstance: {fileID: 1062311950}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1068674754
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1068674756}
-  - component: {fileID: 1068674755}
-  m_Layer: 0
-  m_Name: BackgroundMusic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1068674755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068674754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d59d091eda3d0341b881320de7762dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  introMusic: 0
-  backgroundIntroMusic: 0
-  backgroundMusic: 16
---- !u!4 &1068674756
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068674754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1163828693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1219,27 +1209,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.x
-      value: 4.954648
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.y
-      value: 1.8625414
+      value: 2.0625
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.0079853535
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.9375
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.8125
+      value: 2.0625
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: dialogName
@@ -1336,20 +1330,28 @@ PrefabInstance:
       value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_Size.x
+      value: 4.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.y
-      value: 1.5339692
-      objectReference: {fileID: 0}
-    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.004755378
-      objectReference: {fileID: 0}
-    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2.1875
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.5
+      value: 2.1875
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: dialogName
@@ -1380,7 +1382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
@@ -1460,6 +1462,26 @@ PrefabInstance:
       propertyPath: _dialogueSentences.Array.data[0].SpeakerName
       value: CREAM MAN
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027447, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2949691
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027447, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027447, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.22835231
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027447, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027447, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
@@ -1478,7 +1500,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1232437192}
   - component: {fileID: 1232437191}
+  - component: {fileID: 1232437190}
   - component: {fileID: 1232437193}
+  - component: {fileID: 1232437194}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1486,6 +1510,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!81 &1232437190
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232437189}
+  m_Enabled: 1
 --- !u!20 &1232437191
 Camera:
   m_ObjectHideFlags: 0
@@ -1542,7 +1574,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1232437193
 MonoBehaviour:
@@ -1577,6 +1609,102 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!82 &1232437194
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232437189}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 93fc9c91e0c5b06409bf9666021cdd51, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1256642166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1642,19 +1770,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.x
-      value: 4.954648
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.y
-      value: 1.8625414
+      value: 2.0625
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.0079853535
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Offset.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -1737,12 +1869,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5140927091681027441, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5140927091681027444, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0bcc4dcfbabf07e41af37e5c12ccf0be, type: 3}
+      objectReference: {fileID: 21300000, guid: 60679314abe0f4042bf0cf0be3e268c3, type: 3}
     - target: {fileID: 5140927091681027444, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: m_SortingOrder
       value: -1
@@ -1946,7 +2078,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5820334246c3d3740ac596f429860b2a, type: 3}
     - target: {fileID: 5140927091681027445, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5140927091681027445, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2000,8 +2132,7 @@ PrefabInstance:
       propertyPath: _dialogueSentences.Array.data[0].SpeakerName
       value: THE MAN
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &1380959500 stripped
 GameObject:
@@ -2073,19 +2204,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.x
-      value: 4.954648
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Size.y
-      value: 1.8625414
+      value: 2.0625
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.0079853535
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Offset.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -2326,7 +2461,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2129085704
 PrefabInstance:
@@ -2391,9 +2526,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: The man seems to be happy.
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &2129085705 stripped
 GameObject:
@@ -2417,7 +2559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5140927091681027445, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5140927091681027445, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2465,15 +2607,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: _dialogueSentences.Array.data[0].Dialogue
-      value: Sigh... Everyone has a pair, right? Mine not, and I'm very poor too!
-        Sign...
+      value: The man's mood is normal.
       objectReference: {fileID: 0}
     - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
       propertyPath: _dialogueSentences.Array.data[0].SpeakerName
-      value: THE MAN
+      value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &3440957846808667129 stripped
 GameObject:
@@ -2538,6 +2678,26 @@ PrefabInstance:
     - target: {fileID: 7536915942138258513, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_Size.x
+      value: 4.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_Size.y
+      value: 5.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258514, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.8125
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258515, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: dialogName

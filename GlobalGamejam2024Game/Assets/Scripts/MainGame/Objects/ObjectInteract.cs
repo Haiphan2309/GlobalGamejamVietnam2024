@@ -7,6 +7,7 @@ using UnityEngine;
 public class ObjectInteract : MonoBehaviour
 {
     [SerializeField] private DialogueSentence[] _dialogueSentences;
+    [SerializeField] SpriteRenderer _spriteRenderer;
     
     private void OnMouseEnter()
     {
@@ -26,5 +27,13 @@ public class ObjectInteract : MonoBehaviour
         });
         
         DialogueManager.Instance.StartDialogue( _dialogueSentences, true);
+    }
+
+    private void OnEnable()
+    {
+        Color fadeCorlor = Color.white;
+        fadeCorlor.a = 0;
+        _spriteRenderer.color = fadeCorlor;
+        _spriteRenderer.DOFade(1, 0.3f).SetLoops(3, LoopType.Yoyo);
     }
 }
