@@ -13,8 +13,7 @@ public class CardHandController : MonoBehaviour
     [SerializeField] private CardController _cardPrefab;
     
     private List<CardController> _cardControllers = new List<CardController>();
-    public bool IsHandActive { get; private set; } = false;
-        
+
 
     public void AddCard(SO_Card cardSo)
     {
@@ -36,15 +35,13 @@ public class CardHandController : MonoBehaviour
 
     public void Show()
     {
-        IsHandActive = true;
+        
         gameObject.SetActive(true);
         _cardContentPeekView.Show();
-        
     }
     
     public void Hide()
     {
-        IsHandActive = false;
         
         _cardContentPeekView.Hide();
         

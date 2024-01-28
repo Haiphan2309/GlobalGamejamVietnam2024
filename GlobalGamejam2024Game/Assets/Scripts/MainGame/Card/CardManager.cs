@@ -12,6 +12,8 @@ namespace MainGame
 
         [SerializeField] private CardHandController cardHandController;
         
+        public bool IsHandActive { get; private set; } = false;
+
         
         private void Awake()
         {
@@ -26,11 +28,20 @@ namespace MainGame
                 cardHandController.AddCard(cardSo);
             }
             
-            cardHandController.Show();
-            
+            Show(); // Remove this if not want to show cards at start
         }
 
+        public void Show()
+        {
+            IsHandActive = true;
+            cardHandController.Show();
+        }
         
+        public void Hide()
+        {
+            IsHandActive = false;
+            cardHandController.Hide();
+        }
 
         
         //public void UseCard(CardController cardController, SO_Card cardSo)
