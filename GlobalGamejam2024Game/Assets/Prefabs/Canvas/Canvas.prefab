@@ -31,7 +31,7 @@ RectTransform:
   m_Children:
   - {fileID: 1850524403}
   m_Father: {fileID: 7222510451699282137}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -611,7 +611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -8.900024, y: -0.000061035156}
+  m_AnchoredPosition: {x: -8.899963, y: -0.000061035156}
   m_SizeDelta: {x: 47.8289, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5349470252260984969
@@ -1375,7 +1375,7 @@ RectTransform:
   - {fileID: 3001389422870565478}
   - {fileID: 8894164181439513645}
   m_Father: {fileID: 7222510451699282137}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1794,10 +1794,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7356014319222420546}
-  - {fileID: 7222510451810307415}
-  - {fileID: 7222510451320224374}
   - {fileID: 7222510452622040332}
   - {fileID: 504355006}
+  - {fileID: 7222510451320224374}
+  - {fileID: 7222510451810307415}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2202,7 +2202,7 @@ RectTransform:
   - {fileID: 7222510451380892278}
   - {fileID: 7222510450776691572}
   m_Father: {fileID: 7222510451699282137}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2942,7 +2942,7 @@ RectTransform:
   m_Children:
   - {fileID: 7222510450591006153}
   m_Father: {fileID: 7222510451699282137}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2962,7 +2962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 7220553260169171805}
-  _moveAnimationSpeed: 0.5
+  _moveAnimationSpeed: 0.25
 --- !u!1 &7375078322458060874
 GameObject:
   m_ObjectHideFlags: 0

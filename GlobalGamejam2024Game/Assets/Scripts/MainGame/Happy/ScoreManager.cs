@@ -31,15 +31,15 @@ namespace MainGame.Happy
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                IncreaseHappy(0.1f);
+                IncreaseHappy(0.2f);
             }
         }
 
-        public void InitializeHappy(float happyValue)
+        public void InitializeHappy(float initialHappyValue, float maxHappyValue = 1)
         {
-            _happyValue = happyValue;
+            _happyValue = initialHappyValue;
 
-            _happyView.Initialize(1,happyValue);
+            _happyView.Initialize(maxHappyValue,initialHappyValue);
             
         }
         
