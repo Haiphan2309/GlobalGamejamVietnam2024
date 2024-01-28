@@ -6,6 +6,7 @@ using Level_2;
 using MainGame;
 using MainGame.Card;
 using MainGame.Counter;
+using MainGame.Happy;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -69,7 +70,8 @@ public class CardController : MonoBehaviour
         cardHandController.EnableAllCards();
         cardHandController.RemoveCard(this);
         _cardHoverInfoProvider.HideCardInfo();
-        _counterController.DecreaseCounter();
+        
+        ScoreManager.Instance.DecreaseCounter();
         
         Destroy(gameObject);
     }
