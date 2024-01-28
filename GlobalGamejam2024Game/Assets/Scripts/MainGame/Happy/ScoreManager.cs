@@ -1,6 +1,7 @@
 ﻿using System;
 using GDC.Common;
 using MainGame.Counter;
+using MainGame.Dialog;
 using UnityEngine;
 using UnityUtilities;
 
@@ -56,6 +57,7 @@ namespace MainGame.Happy
                 
                 _winGameOver.gameObject.SetActive(true);
                 
+                TurnOffEverything();
                 OnHappyFill?.Invoke();
                 
             }
@@ -88,13 +90,29 @@ namespace MainGame.Happy
                 
                 _loseGameOver.gameObject.SetActive(true);
                 
-                
+                TurnOffEverything();
                 OnCounterEnd?.Invoke();
             }
         }
         
 
-        
+        private void TurnOffEverything()
+        {
+            _happyView.gameObject.SetActive(false);
+            _counterController.gameObject.SetActive(false);
+            var cardManager = FindObjectOfType<CardManager>();
+            cardManager.Hide();
+            
+            var dialogueManager = FindObjectOfType<DialogueManager>();
+            
+            dialogueManager.Hide();
+            dialogueManager.IsEnabled = false;
+            
+            
+            
+            
+                
+        }
         
         
         

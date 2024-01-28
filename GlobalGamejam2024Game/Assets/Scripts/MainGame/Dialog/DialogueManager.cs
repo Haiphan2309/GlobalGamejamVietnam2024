@@ -10,15 +10,19 @@ namespace MainGame.Dialog
         [SerializeField] private DialogueView _dialogueView;
 
         public bool IsDialogActive { get; set; } = true;
+        public bool IsEnabled { get; set; } = true;
         
         public Action OnDialogueEnd;
 
         public void StartDialogue(string dialog, string speakerName, bool endLastDialogue = true, Action onDialogueEnd = null)
         {
+            if (IsEnabled == false) return;
             StartDialogue(new DialogueSentence(dialog, speakerName), endLastDialogue, onDialogueEnd );
         }
         public void StartDialogue(DialogueSentence dialogueSentence, bool endLastDialogue = true, Action onDialogueEnd = null)
         {
+            if (IsEnabled == false) return;
+            
             if (!_dialogueView.gameObject.activeSelf) 
                 _dialogueView.gameObject.SetActive(true);
             
@@ -36,6 +40,9 @@ namespace MainGame.Dialog
         
         public void StartDialogue(DialogueSentence [] dialogueSentences, bool endLastDialogue = true,  Action onDialogueEnd = null)
         {
+            
+            if (IsEnabled == false) return;
+            
             if (!_dialogueView.gameObject.activeSelf) 
                 _dialogueView.gameObject.SetActive(true);
             
