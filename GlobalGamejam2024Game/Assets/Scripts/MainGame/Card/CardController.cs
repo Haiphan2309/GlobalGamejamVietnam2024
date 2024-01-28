@@ -5,6 +5,7 @@ using Level_1;
 using Level_2;
 using MainGame;
 using MainGame.Card;
+using MainGame.Counter;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +15,8 @@ public class CardController : MonoBehaviour
     [SerializeField] private Button _useButton;
     private CardView _cardView;
     private CardHoverInfoProvider _cardHoverInfoProvider;
-    private CardHandSystem cardHandSystem;
+    private CardHandSystem _cardHandSystem;
+    private CounterController _counterController;
     
     private ICardSkill _cardSkill;
     
@@ -28,7 +30,8 @@ public class CardController : MonoBehaviour
         
         _cardSkill = GetComponent<ICardSkill>();
         
-        cardHandSystem = FindObjectOfType<CardHandSystem>();
+        _counterController = FindObjectOfType<CounterController>();
+        _cardHandSystem = FindObjectOfType<CardHandSystem>();
     }
     
     public void SetCard(SO_Card cardSo)
@@ -56,16 +59,18 @@ public class CardController : MonoBehaviour
             yield break;
         }
         
-        cardHandSystem.DisableAllCards();
+        _cardHandSystem.DisableAllCards();
 
         TurnSystem.Instance?.PickUpCard(this._cardSo.CardType);
         TurnSystem1.Instance?.PickUpCard(this._cardSo.CardType);
         
         //GameLoopManager.Instance.UseCard(this, _cardSo);
         
-        cardHandSystem.EnableAllCards();
-        cardHandSystem.RemoveCard(this);
+        _cardHandSystem.EnableAllCards();
+        _cardHandSystem.RemoveCard(this);
         _cardHoverInfoProvider.HideCardInfo();
+        _counterController.DecreaseCounter();
+        
         Destroy(gameObject);
     }
 
