@@ -20,5 +20,8 @@ namespace AudioPlayer
         SFX_CLICK_BUTTON,
         SFX_HAPPY,
         SFX_BORING,
+        SFX_LAUGH,
+        SFX_WIN,
+        SFX_LOSE,
     }
 }

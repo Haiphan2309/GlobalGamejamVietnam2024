@@ -1,4 +1,5 @@
 using GDC.Enums;
+using Level_1;
 using MainGame.Dialog;
 using UnityEngine;
 
@@ -16,20 +17,20 @@ namespace Level_2
             {
                 if (currentState == value)
                     return;
+                dict[currentState].SetActive(false);
                 currentState = value;
                 if (currentState == CharacterState.VERY_SAD)
                 {
-                    normalMan.SetActive(false);
                     creamMan.SetActive(false);
-                    verySadMan.SetActive(true);
                     losePanel.SetActive(true);
                 }
                 if (currentState == CharacterState.LAUGH)
                     winPanel.SetActive(true);
             }
         }
+        [SerializeField] NPCDict dict;
         [SerializeField] GameObject winPanel, losePanel;
-        [SerializeField] GameObject normalMan, creamMan,verySadMan, normalGirl, benchGirl, girlConfession;
+        [SerializeField] GameObject creamMan, normalGirl, benchGirl, girlConfession;
         [SerializeField] GameObject[] balloons;
 
         private void Awake()
@@ -90,6 +91,7 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "You used a MONEY card.","");
             if (currentState < CharacterState.LITTLE_HAPPY)
                 CurrentState++;
+            dict[currentState].SetActive(true);
             money = true;
             DialogueManager.Instance.StartDialogue( "The man holds the money in his hand, feeling relieved.","");
         }
@@ -100,9 +102,8 @@ namespace Level_2
             if (!bench)
             {
                 CurrentState = CharacterState.VERY_SAD;
-                normalMan.SetActive(false);
                 normalGirl.SetActive(false);
-                verySadMan.SetActive(true);
+                dict[currentState].SetActive(true);
                 DialogueManager.Instance.StartDialogue( "The man shows his love with the girl but her leg is aching so she doesn't care him.","");
             }    
             else
@@ -112,14 +113,15 @@ namespace Level_2
                     benchGirl.SetActive(false);
                     girlConfession.SetActive(true);
                     CurrentState = CharacterState.LAUGH;
+                    dict[currentState].SetActive(false);
+                    creamMan.SetActive(true);
                     DialogueManager.Instance.StartDialogue( "The man gives the girl an ice cream.\nShe accepts his love.\nThey have a happy conversation.","");
                 }
                 else
                 {
-                    normalMan.SetActive(false);
                     benchGirl.SetActive(false);
-                    verySadMan.SetActive(true);
                     CurrentState = CharacterState.VERY_SAD;
+                    dict[currentState].SetActive(true);
                     DialogueManager.Instance.StartDialogue( "The man shows his love with the girl but she has no feeling with him so she doesn't care him.","");
                 }
             }
@@ -131,6 +133,7 @@ namespace Level_2
             if (!money)
             {
                 CurrentState--;
+                dict[currentState].SetActive(true);
                 DialogueManager.Instance.StartDialogue( "The man wants to buy something but he doesn't have enough money.","");
             }
             else
@@ -148,6 +151,8 @@ namespace Level_2
             bench = true;
             normalGirl.SetActive(false);
             benchGirl.SetActive(true);
+            creamMan.SetActive(false);
+            dict[currentState].SetActive(true);
             DialogueManager.Instance.StartDialogue( "The girl finds a bench in the park.\nShe takes a seat at the bench.","");
         }
 
@@ -155,6 +160,8 @@ namespace Level_2
         {
             DialogueManager.Instance.StartDialogue( "You used a APPLE card.","");
             DialogueManager.Instance.StartDialogue( "Nothing happened.","");
+            creamMan.SetActive(false);
+            dict[currentState].SetActive(true);
         }
 
         void Knife()
@@ -162,6 +169,8 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "You used a KNIFE card.","");
             CurrentState = (currentState > CharacterState.LITTLE_SAD) ? (currentState - 2) : CharacterState.VERY_SAD;
             iceCream = false;
+            creamMan.SetActive(false);
+            dict[currentState].SetActive(true);
             DialogueManager.Instance.StartDialogue( "People sees the man holding a knife.\nThey arrest him.","");
         }
 
@@ -169,12 +178,16 @@ namespace Level_2
         {
             DialogueManager.Instance.StartDialogue( "You used a BONE card.","");
             DialogueManager.Instance.StartDialogue( "Nothing happened.","");
+            creamMan.SetActive(false);
+            dict[currentState].SetActive(true);
         }
 
         void Rice()
         {
             DialogueManager.Instance.StartDialogue( "You used a RICE card.","");
             DialogueManager.Instance.StartDialogue( "Nothing happened.","");
+            creamMan.SetActive(false);
+            dict[currentState].SetActive(true);
         }
 
         void Balloon()
@@ -184,6 +197,8 @@ namespace Level_2
                 CurrentState++;
             foreach (GameObject balloon in balloons)
                 balloon.SetActive(true);
+            creamMan.SetActive(false);
+            dict[currentState].SetActive(true);
             DialogueManager.Instance.StartDialogue( "The park is decorated with balloons, making people feel excited.","");
         }
 
@@ -192,6 +207,8 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "You used a SCARY MASK card.","");
             iceCream = false;
             currentState--;
+            creamMan.SetActive(false);
+            dict[currentState].SetActive(true);
             DialogueManager.Instance.StartDialogue( "The mask makes eveyone scared.\nThey avoid him.","");
         }
 
@@ -199,12 +216,16 @@ namespace Level_2
         {
             DialogueManager.Instance.StartDialogue( "You used a MILK card.","");
             DialogueManager.Instance.StartDialogue( "Nothing happened.","");
+            creamMan.SetActive(false);
+            dict[currentState].SetActive(true);
         }
 
         void Rainy()
         {
             DialogueManager.Instance.StartDialogue( "You used a RAINY card.","");
             CurrentState = CharacterState.VERY_SAD;
+            creamMan.SetActive(false);
+            dict[currentState].SetActive(true);
             DialogueManager.Instance.StartDialogue( "The rain falls.\nEveryone runs toward their home.\nThe man feel VERY SAD.","");
         }
     }
