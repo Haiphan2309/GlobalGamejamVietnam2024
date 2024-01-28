@@ -42,3 +42,12 @@ MonoBehaviour:
   - name: SFX_BORING
     Id: 10
     Data: {fileID: 11400000, guid: 2ef2697fbe46ecc44beceeb488938cae, type: 2}
+  - name: SFX_LAUGH
+    Id: 11
+    Data: {fileID: 11400000, guid: 2174c7fab03dda14c86fe6ddc95e32f0, type: 2}
+  - name: SFX_WIN
+    Id: 12
+    Data: {fileID: 11400000, guid: b64af86632d12264eb9b5293a300d639, type: 2}
+  - name: SFX_LOSE
+    Id: 13
+    Data: {fileID: 11400000, guid: d22be2d5bfb6aea4b864abdb56cef8b1, type: 2}
