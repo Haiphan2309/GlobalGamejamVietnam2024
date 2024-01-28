@@ -43,6 +43,11 @@ namespace Level_1
         private void Awake()
         {
             Instance = this;
+            
+        }
+
+        private void Start()
+        {
             SetUp(CharacterState.LITTLE_SAD);
             DialogueManager.Instance.Hide();
             CardManager.Instance.Hide();
