@@ -2,6 +2,7 @@ using DG.Tweening;
 using MainGame.Dialog;
 using System.Collections;
 using System.Collections.Generic;
+using MainGame;
 using UnityEngine;
 
 public class ObjectInteract : MonoBehaviour
@@ -26,7 +27,20 @@ public class ObjectInteract : MonoBehaviour
             transform.DOScale(1, 0.15f);
         });
         
-        DialogueManager.Instance.StartDialogue( _dialogueSentences, true);
+        CheckDialogue();
+    }
+    
+    
+    private void CheckDialogue()
+    {
+        if (!DialogueManager.Instance.IsDialogActive && DialogueManager.Instance.IsEnabled)
+        {
+            CardManager.Instance.Hide();
+            DialogueManager.Instance.StartDialogue(_dialogueSentences, false, () =>
+            {
+                CardManager.Instance.Show();
+            });
+        }
     }
 
     private void OnEnable()
