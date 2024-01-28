@@ -119,6 +119,8 @@ namespace MainGame.Dialog
             _moveTween?.Kill();
             _dialogueView.gameObject.SetActive(true);
             _moveTween = _dialogueView.DOAnchorPos(_showTransform.anchoredPosition, _moveDuration).SetEase(_moveEase);
+            
+            _nextButton.gameObject.SetActive(true);
         }
 
         public void Hide()
@@ -127,6 +129,8 @@ namespace MainGame.Dialog
             _moveTween = _dialogueView.DOAnchorPos(_hideTransform.anchoredPosition, _moveDuration).SetEase(_moveEase)
                 .OnComplete(() => _dialogueView.gameObject.SetActive(false)
                 );
+            
+            _nextButton.gameObject.SetActive(false);
         }
         
         
