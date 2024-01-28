@@ -16,7 +16,6 @@ namespace MainGame.Dialog
         }
         public void StartDialogue(DialogueSentence dialogueSentence, bool endLastDialogue = true)
         {
-            IsDialogActive = true;
             
             if (!_dialogueView.gameObject.activeSelf) 
                 _dialogueView.gameObject.SetActive(true);
@@ -25,13 +24,12 @@ namespace MainGame.Dialog
                 _dialogueView.ForceEndDialogue();
             
             _dialogueView.AddDialogue(dialogueSentence);
-            _dialogueView.Show();
+            
+            Show();
         }
         
         public void StartDialogue(DialogueSentence [] dialogueSentences, bool endLastDialogue = true)
         {
-            IsDialogActive = true;
-            
             if (!_dialogueView.gameObject.activeSelf) 
                 _dialogueView.gameObject.SetActive(true);
             
@@ -44,17 +42,32 @@ namespace MainGame.Dialog
                 _dialogueView.AddDialogue(dialogueSentence);
             }
             
-            _dialogueView.Show();
+            Show();
         }
         
         public void ForceEndDialogue()
         {
             IsDialogActive = false;
             
-            _dialogueView.Hide();
+            Hide();
+            
             
         }
 
+        public void Show()
+        {
+            
+            IsDialogActive = true;
+
+            _dialogueView.Show();
+        }
+        
+        public void Hide()
+        {
+            IsDialogActive = false;
+            
+            _dialogueView.Hide();
+        }
 
     }
 }
