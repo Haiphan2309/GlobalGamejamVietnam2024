@@ -12,6 +12,7 @@ public enum SoundType
 {
     NONE = -1,
     COMMON = 0,
+    MUSIC = 1,
 }
 
 namespace AudioPlayer

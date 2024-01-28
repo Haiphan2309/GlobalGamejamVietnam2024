@@ -23,5 +23,8 @@ namespace AudioPlayer
         SFX_LAUGH,
         SFX_WIN,
         SFX_LOSE,
+        _________MUSIC____________,
+        MUSIC_MAIN_MENU,
+        MUSIC_GAMEPLAY,
     }
 }
