@@ -26,7 +26,8 @@ public class HappyView : MonoBehaviour
         _currentPercent = currentPercent < 0 ? _currentPercent : Mathf.Min(currentPercent,maxPercent);
         OnFillComplete = onTimerComplete;
         
-        MoveSlider(currentPercent, currentPercent);
+        _slider.value = _currentPercent / _maxPercent;
+        //MoveSlider(currentPercent, currentPercent);
     }
         
     
@@ -50,9 +51,9 @@ public class HappyView : MonoBehaviour
                 // Optionally, you can perform additional actions here
                 OnFillComplete?.Invoke();
                 
-                _currentPercent = endTime;
             });
         
+        _currentPercent = endTime;
     }
     
     
