@@ -61,11 +61,18 @@ namespace GDC.Enums
         BONE,
         RICE,
         WOOL,
-        SCARE_MASK,
+        SCARY_MASK,
         MILK,
         SOFA,
 
-
+        MONEY = 100,
+        CONFESSION,
+        BUY,
+        BENCH,
+        APPLE,
+        KNIFE,
+        BALLOON,
+        RAINY,
     }
     public enum CharacterState
     {

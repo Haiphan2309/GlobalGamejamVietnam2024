@@ -10,6 +10,5 @@ public class SO_Card : ScriptableObject
     public Sprite Icon;
     public string Name;
     public string Description;
-    public string Dialogue;
 
 }

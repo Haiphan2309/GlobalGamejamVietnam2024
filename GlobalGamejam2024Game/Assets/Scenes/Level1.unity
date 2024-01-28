@@ -227,11 +227,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: DogPicture
       objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+--- !u!1 &34314646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+  m_PrefabInstance: {fileID: 34314645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &75274415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,11 +345,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wool
       objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+--- !u!1 &75274416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+  m_PrefabInstance: {fileID: 75274415}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &77787614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7536915942138258512, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
@@ -544,11 +562,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageSofa
       objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+--- !u!1 &466057226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+  m_PrefabInstance: {fileID: 466057225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &496384250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7536915942138258512, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
@@ -857,7 +884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1082,11 +1109,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: MousePicture
       objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+--- !u!1 &760973312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+  m_PrefabInstance: {fileID: 760973311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &830229501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1264,8 +1300,17 @@ MonoBehaviour:
   idleCat: {fileID: 2098875558}
   playCat: {fileID: 1206202678}
   scaryCat: {fileID: 1440890889}
-  winPanel: {fileID: 0}
-  losePanel: {fileID: 0}
+  winPanel: {fileID: 1085097538}
+  losePanel: {fileID: 1718296423}
+  catPicture: {fileID: 1657979036}
+  dogPicture: {fileID: 34314646}
+  mousePicture: {fileID: 760973312}
+  penguinPicture: {fileID: 1138321961}
+  mouse: {fileID: 988276044}
+  wool: {fileID: 75274416}
+  scaryMask: {fileID: 1783787204}
+  sofa: {fileID: 1163828694}
+  damagedSofa: {fileID: 466057226}
 --- !u!4 &953856742
 Transform:
   m_ObjectHideFlags: 0
@@ -1388,6 +1433,10 @@ PrefabInstance:
     - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
       propertyPath: m_Name
       value: Mouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1537,6 +1586,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+--- !u!1 &1085097538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 493380203579752944, guid: ea700cd39967a414cac8faca891deaf0, type: 3}
+  m_PrefabInstance: {fileID: 1085097537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1138321960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1641,11 +1695,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: PenguinPicture
       objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+--- !u!1 &1138321961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+  m_PrefabInstance: {fileID: 1138321960}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1163828693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1754,11 +1817,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sofa
       objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+--- !u!1 &1163828694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+  m_PrefabInstance: {fileID: 1163828693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1205851065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2500,11 +2572,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatPicture
       objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+--- !u!1 &1657979036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+  m_PrefabInstance: {fileID: 1657979035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1718296422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2566,6 +2647,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6df9796becd72f4b8b7414b81f650f9, type: 3}
+--- !u!1 &1718296423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3634009222989385962, guid: f6df9796becd72f4b8b7414b81f650f9, type: 3}
+  m_PrefabInstance: {fileID: 1718296422}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1783787203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2666,11 +2752,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScareMark
       objectReference: {fileID: 0}
+    - target: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+--- !u!1 &1783787204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+  m_PrefabInstance: {fileID: 1783787203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1919313609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7536915942138258512, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}

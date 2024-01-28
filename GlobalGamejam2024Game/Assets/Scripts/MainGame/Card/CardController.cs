@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Level_1;
+using Level_2;
 using MainGame;
 using MainGame.Card;
 using UnityEngine;
@@ -55,13 +57,11 @@ public class CardController : MonoBehaviour
         }
         
         cardHandSystem.DisableAllCards();
+
+        TurnSystem.Instance?.PickUpCard(this._cardSo.CardType);
+        TurnSystem1.Instance?.PickUpCard(this._cardSo.CardType);
         
-        if (_cardSkill != null)
-        {
-            yield return StartCoroutine(_cardSkill.UseCard());
-        }
-        
-        GameLoopManager.Instance.UseCard(this, _cardSo);
+        //GameLoopManager.Instance.UseCard(this, _cardSo);
         
         cardHandSystem.EnableAllCards();
         cardHandSystem.RemoveCard(this);

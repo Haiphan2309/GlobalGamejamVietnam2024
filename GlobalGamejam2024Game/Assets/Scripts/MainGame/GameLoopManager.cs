@@ -33,15 +33,15 @@ namespace MainGame
         
 
         
-        public void UseCard(CardController cardController, SO_Card cardSo)
-        {
+        //public void UseCard(CardController cardController, SO_Card cardSo)
+        //{
             
-            var dialogueSentence = new DialogueSentence(cardSo.Dialogue, _soNpc.Name);
-            DialogueManager.Instance.StartDialogue(dialogueSentence, true);
+        //    var dialogueSentence = new DialogueSentence(cardSo.Dialogue, _soNpc.Name);
+        //    DialogueManager.Instance.StartDialogue(dialogueSentence, true);
             
-            cardHandSystem.Hide();
+        //    cardHandSystem.Hide();
             
-        }
+        //}
 
         public void EndDialogue()
         {
