@@ -15,6 +15,7 @@ namespace MainGame
         public bool IsHandActive { get; private set; } = false;
 
         
+        
         private void Awake()
         {
 
@@ -57,10 +58,8 @@ namespace MainGame
         public void EndDialogue()
         {
             
-            
-            DialogueManager.Instance.ForceEndDialogue(); 
-            
             cardHandController.Show();
+            
         }
     }
 

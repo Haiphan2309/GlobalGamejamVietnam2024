@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityUtilities;
 
 namespace MainGame.Dialog
@@ -9,14 +10,15 @@ namespace MainGame.Dialog
         [SerializeField] private DialogueView _dialogueView;
 
         public bool IsDialogActive { get; set; } = true;
+        
+        public Action OnDialogueEnd;
 
-        public void StartDialogue(string dialog, string speakerName, bool endLastDialogue = true)
+        public void StartDialogue(string dialog, string speakerName, bool endLastDialogue = true, Action onDialogueEnd = null)
         {
-            StartDialogue(new DialogueSentence(dialog, speakerName), endLastDialogue );
+            StartDialogue(new DialogueSentence(dialog, speakerName), endLastDialogue, onDialogueEnd );
         }
-        public void StartDialogue(DialogueSentence dialogueSentence, bool endLastDialogue = true)
+        public void StartDialogue(DialogueSentence dialogueSentence, bool endLastDialogue = true, Action onDialogueEnd = null)
         {
-            
             if (!_dialogueView.gameObject.activeSelf) 
                 _dialogueView.gameObject.SetActive(true);
             
@@ -25,10 +27,14 @@ namespace MainGame.Dialog
             
             _dialogueView.AddDialogue(dialogueSentence);
             
+            
+            OnDialogueEnd = onDialogueEnd;
+            
             Show();
+            
         }
         
-        public void StartDialogue(DialogueSentence [] dialogueSentences, bool endLastDialogue = true)
+        public void StartDialogue(DialogueSentence [] dialogueSentences, bool endLastDialogue = true,  Action onDialogueEnd = null)
         {
             if (!_dialogueView.gameObject.activeSelf) 
                 _dialogueView.gameObject.SetActive(true);
@@ -42,12 +48,17 @@ namespace MainGame.Dialog
                 _dialogueView.AddDialogue(dialogueSentence);
             }
             
+            OnDialogueEnd = onDialogueEnd;
+            
             Show();
         }
         
-        public void ForceEndDialogue()
+        
+        public void EndDialogue()
         {
             IsDialogActive = false;
+            
+            OnDialogueEnd?.Invoke();
             
             Hide();
             
