@@ -24,16 +24,18 @@ namespace Level_1
             get => currentState;
             set
             {
+                if (value < CharacterState.NORMAL)
+                    SoundManager.Instance.PlaySound(SoundID.SFX_BORING);
+                else if (value > CharacterState.NORMAL && value < CharacterState.LAUGH)
+                    SoundManager.Instance.PlaySound(SoundID.SFX_HAPPY);
+                else if (value==CharacterState.LAUGH)
+                    SoundManager.Instance.PlaySound(SoundID.SFX_LAUGH);
+
                 if (currentState == value)
                     return;
                 ScoreManager.Instance.InitializeHappy((int)currentState * 0.2f);
                 dict[currentState].SetActive(false);
                 currentState = value;
-                dict[currentState].SetActive(true);
-                if (currentState == CharacterState.VERY_SAD) 
-                    losePanel.SetActive(true);
-                if (currentState == CharacterState.LAUGH)
-                    winPanel.SetActive(true);
             }
         }
         [SerializeField] NPCDict dict;
@@ -53,6 +55,7 @@ namespace Level_1
         private void Start()
         {
             SetUp(CharacterState.LITTLE_SAD);
+            ScoreManager.Instance.InitializeHappy(0.4f);
             DialogueManager.Instance.Hide();
             CardManager.Instance.Hide();
             StartCoroutine(Cor_Init());

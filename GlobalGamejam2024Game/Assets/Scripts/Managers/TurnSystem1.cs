@@ -21,6 +21,13 @@ namespace Level_2
             get => currentState;
             set
             {
+                if (value < CharacterState.NORMAL)
+                    SoundManager.Instance.PlaySound(SoundID.SFX_BORING);
+                else if (value > CharacterState.NORMAL && value < CharacterState.LAUGH)
+                    SoundManager.Instance.PlaySound(SoundID.SFX_HAPPY);
+                else if (value == CharacterState.LAUGH)
+                    SoundManager.Instance.PlaySound(SoundID.SFX_LAUGH);
+
                 if (currentState == value)
                     return;
                 
@@ -48,6 +55,7 @@ namespace Level_2
         private void Start()
         {
             SetUp(CharacterState.LITTLE_SAD);
+            ScoreManager.Instance.InitializeHappy(0.4f);
             DialogueManager.Instance.Hide();
             CardManager.Instance.Hide();
             StartCoroutine(Cor_Init());
