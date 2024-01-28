@@ -116,14 +116,6 @@ namespace GDC.Managers
 //                 TriggerDisableMusic();
 //             }
 // #endif
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                PlaySound(SoundID.CLICK_OBJECT);
-            }
-            if (Input.GetKeyDown(KeyCode.N))
-            {
-                PlaySound(SoundID.SFX_CLICK_BUTTON);
-            }
         }
 
         void TriggerDisableMusic()
@@ -768,7 +760,7 @@ namespace GDC.Managers
 
         private void LoadCommonSoundMaps()
         {
-            // LoadSoundMap(SoundType.MAIN_MENU);
+            LoadSoundMap(SoundType.MUSIC);
             LoadSoundMap(SoundType.COMMON);
         }
 

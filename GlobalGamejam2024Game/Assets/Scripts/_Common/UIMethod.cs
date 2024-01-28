@@ -4,6 +4,7 @@ using GDC.Managers;
 using AudioPlayer;
 using UnityEngine;
 using DG.Tweening;
+using GDC.Enums;
 
 namespace GDC.Common
 {
@@ -12,25 +13,31 @@ namespace GDC.Common
         // [SerializeField] RectTransform creditPanel;
         public void PointerEnterButton()
         {
-            // SoundManager.Instance.PlaySound(SoundID.SFX_HOVER_BUTTON);
+            SoundManager.Instance.PlaySound(SoundID.SFX_HOVER_BUTTON);
             GetComponent<RectTransform>().DOScale(new Vector3(1.25f, 1.25f, 1.25f), 0.25f);
         }
         public void PointerExitButton()
         {
-            // SoundManager.Instance.PlaySound(SoundID.SFX_HOVER_BUTTON);
             GetComponent<RectTransform>().DOScale(Vector3.one, 0.25f);
+        }
+        public void PointerClickButton()
+        {
+            SoundManager.Instance.PlaySound(SoundID.SFX_CLICK_BUTTON);
         }
         public void StartGame()
         {
-            print("START");
+            GameManager.Instance.LoadSceneManually(SceneType.LEVEL_MENU, TransitionType.LEFT);
         }
         public void BackToMainMenu()
         {
-            print("BACK");
+            GameManager.Instance.LoadSceneManually(SceneType.MAIN_MENU, TransitionType.LEFT);
         }
         public void EnterLevel(int level)
         {
-            print("ENTER LEVEL " + level);
+            if (level == 1)
+                GameManager.Instance.LoadSceneManually(SceneType.LEVEL_1, TransitionType.LEFT);
+            else if (level == 2)
+                GameManager.Instance.LoadSceneManually(SceneType.LEVEL_2, TransitionType.LEFT);
         }
         public void CreditButton(RectTransform creditPanel)
         {
