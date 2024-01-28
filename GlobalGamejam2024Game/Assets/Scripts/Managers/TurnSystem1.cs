@@ -40,7 +40,7 @@ namespace Level_2
         [SerializeField] GameObject winPanel, losePanel;
         [SerializeField] GameObject creamMan,knifeMan,maskMan, normalGirl, benchGirl, girlConfession;
         [SerializeField] GameObject[] balloons;
-        [SerializeField] GameObject benchObj;
+        [SerializeField] GameObject benchObj,rain;
         [SerializeField] float timeGap = 1;
 
         private void Awake()
@@ -338,6 +338,7 @@ namespace Level_2
         {
             DialogueManager.Instance.StartDialogue( "You used a RAINY card.","");
             CurrentState = CharacterState.VERY_SAD;
+            rain.SetActive(true);
             creamMan.SetActive(false);
             dict[currentState].SetActive(true);
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
