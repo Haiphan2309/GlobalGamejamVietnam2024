@@ -1441,6 +1441,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+--- !u!1 &1205851066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7536915942138258516, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
+  m_PrefabInstance: {fileID: 1205851065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1218531824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2209,6 +2214,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+--- !u!1 &1386668494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5140927091681027441, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+  m_PrefabInstance: {fileID: 1386668493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1412745106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2446,6 +2456,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+--- !u!1 &1450430172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5140927091681027441, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+  m_PrefabInstance: {fileID: 1450430171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1555680172 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7536915942138258512, guid: 9a6e7373f09584347af122b324e4b84e, type: 3}
@@ -2649,6 +2664,8 @@ MonoBehaviour:
   winPanel: {fileID: 1062311951}
   losePanel: {fileID: 1990382611}
   creamMan: {fileID: 1329345631}
+  knifeMan: {fileID: 1386668494}
+  maskMan: {fileID: 1450430172}
   normalGirl: {fileID: 892694311}
   benchGirl: {fileID: 1352229187}
   girlConfession: {fileID: 607725758}
@@ -2656,7 +2673,7 @@ MonoBehaviour:
   - {fileID: 1163828694}
   - {fileID: 1256642168}
   - {fileID: 1412745108}
-  benchObj: {fileID: 0}
+  benchObj: {fileID: 1205851066}
   timeGap: 1
 --- !u!4 &2128615255
 Transform:

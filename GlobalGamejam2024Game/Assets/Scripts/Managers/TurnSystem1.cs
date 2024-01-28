@@ -24,13 +24,6 @@ namespace Level_2
                 ScoreManager.Instance.InitializeHappy((int)currentState * 0.2f);
                 dict[currentState].SetActive(false);
                 currentState = value;
-                if (currentState == CharacterState.VERY_SAD)
-                {
-                    creamMan.SetActive(false);
-                    losePanel.SetActive(true);
-                }
-                if (currentState == CharacterState.LAUGH)
-                    winPanel.SetActive(true);
             }
         }
         [SerializeField] NPCDict dict;
@@ -117,6 +110,17 @@ namespace Level_2
         {
             currentState = state;
         }
+
+        void DetectEndGame()
+        {
+            DialogueManager.Instance.Hide();
+            if (currentState==CharacterState.VERY_SAD)
+                losePanel.SetActive(true);
+            else if (currentState==CharacterState.LAUGH)
+                winPanel.SetActive(true);
+            else
+                CardManager.Instance.Show();
+        }
         IEnumerator Cor_Money()
         {
             DialogueManager.Instance.StartDialogue( "You used a MONEY card.","");
@@ -129,8 +133,8 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "The man holds the money in his hand, feeling relieved.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+
+            DetectEndGame();
         }
 
         IEnumerator Cor_Confession()
@@ -170,8 +174,7 @@ namespace Level_2
             }
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Buy()
@@ -196,8 +199,7 @@ namespace Level_2
             }
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Bench()
@@ -214,8 +216,7 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "The girl finds a bench in the park.\nShe takes a seat at the bench.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Apple()
@@ -228,8 +229,7 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "Nothing happened.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Knife()
@@ -245,8 +245,7 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "People sees the man holding a knife.\nThey arrest him.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Bone()
@@ -259,8 +258,7 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "Nothing happened.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Rice()
@@ -273,8 +271,7 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "Nothing happened.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Balloon()
@@ -291,8 +288,7 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "The park is decorated with balloons, making people feel excited.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_ScaryMask()
@@ -308,8 +304,7 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "The mask makes eveyone scared.\nThey avoid him.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Milk()
@@ -322,8 +317,7 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "Nothing happened.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Rainy()
@@ -337,8 +331,7 @@ namespace Level_2
             DialogueManager.Instance.StartDialogue( "The rain falls.\nEveryone runs toward their home.\nThe man feel VERY SAD.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
     }
 }

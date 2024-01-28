@@ -59,7 +59,16 @@ namespace Level_1
             currentState = state;
             dict[state].SetActive(true);
         }
-
+        void DetectEndGame()
+        {
+            DialogueManager.Instance.Hide();
+            if (currentState == CharacterState.VERY_SAD)
+                losePanel.SetActive(true);
+            else if (currentState == CharacterState.LAUGH)
+                winPanel.SetActive(true);
+            else
+                CardManager.Instance.Show();
+        }
         IEnumerator Cor_Init()
         {
             yield return new WaitForSeconds(2);
@@ -142,8 +151,7 @@ namespace Level_1
             }
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_DogPicture()
@@ -170,8 +178,7 @@ namespace Level_1
             }
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_MousePicture()
@@ -183,8 +190,7 @@ namespace Level_1
             DialogueManager.Instance.StartDialogue("Nothing happened.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_PenguinPicture()
@@ -196,8 +202,7 @@ namespace Level_1
             DialogueManager.Instance.StartDialogue("Nothing happened.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }    
 
         IEnumerator Cor_Mouse()
@@ -213,8 +218,7 @@ namespace Level_1
                 DialogueManager.Instance.StartDialogue("A wild cat senses the smell.\nThe man wants to adopt the cat but the cat seems not human-oriented so the man feels bored","");
                 yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
                 yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
+                DetectEndGame();
             }
             else
             {
@@ -231,8 +235,7 @@ namespace Level_1
                     DialogueManager.Instance.StartDialogue("The cat sees the mouse and chases toward it happily.\nThe man feels amazing and LAUGH","");
                 yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
                 yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
+                DetectEndGame();
             }
         }
 
@@ -249,8 +252,7 @@ namespace Level_1
                 DialogueManager.Instance.StartDialogue("A wild cat senses the smell.\nThe man wants to adopt the cat but the cat seems not human-oriented so the man feels bored.","");
                 yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
                 yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
+                DetectEndGame();
             }
             else
             {
@@ -263,8 +265,7 @@ namespace Level_1
                 DialogueManager.Instance.StartDialogue( "The cat sees the food but it doesn't seem hungry.\nThe man feels worried.","");
                 yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
                 yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
+                DetectEndGame();
             }
         }
 
@@ -276,8 +277,7 @@ namespace Level_1
             DialogueManager.Instance.StartDialogue( "Nothing happened.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Rice()
@@ -288,8 +288,7 @@ namespace Level_1
             DialogueManager.Instance.StartDialogue( "Nothing happened.","");
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
-            DialogueManager.Instance.Hide();
-            CardManager.Instance.Show();
+            DetectEndGame();
         }
 
         IEnumerator Cor_Wool()
@@ -300,10 +299,7 @@ namespace Level_1
                 yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
                 yield return new WaitForSeconds(timeGap);
                 DialogueManager.Instance.StartDialogue("Nothing happened.","");
-                yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
-                yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
+                
             }
             else
             {
@@ -318,11 +314,10 @@ namespace Level_1
                     DialogueManager.Instance.StartDialogue( "The cat sees the wool roll and plays with it happily.\nThe man feels amazing.","");
                 else
                     DialogueManager.Instance.StartDialogue("The cat sees the wool roll and plays with it happily.\nThe man feels amazing and LAUGH","");
-                yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
-                yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
             }
+            yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
+            yield return new WaitForSeconds(timeGap);
+            DetectEndGame();
         }
 
         IEnumerator Cor_ScareMask()
@@ -334,10 +329,6 @@ namespace Level_1
                 yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
                 yield return new WaitForSeconds(timeGap);
                 DialogueManager.Instance.StartDialogue( "Nothing happened.","");
-                yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
-                yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
             }
             else
             {
@@ -351,11 +342,10 @@ namespace Level_1
                     DialogueManager.Instance.StartDialogue("The cat looks terrified when it sees the mask.\nThe man feels worried.","");
                 else
                     DialogueManager.Instance.StartDialogue("The cat looks terrified when it sees the mask then it runs away.\nThe man feels VERY SAD","");
-                yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
-                yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
             }
+            yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
+            yield return new WaitForSeconds(timeGap);
+            DetectEndGame();
         }
 
         IEnumerator Cor_Milk()
@@ -369,10 +359,6 @@ namespace Level_1
                 yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
                 yield return new WaitForSeconds(timeGap);
                 DialogueManager.Instance.StartDialogue("A wild cat senses the smell.\nThe man wants to adopt the cat but the cat seems not human-oriented so the man feels bored.", "");
-                yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
-                yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
             }
             else
             {
@@ -383,11 +369,10 @@ namespace Level_1
                 yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
                 yield return new WaitForSeconds(timeGap);
                 DialogueManager.Instance.StartDialogue( "The cat sees the food but it doesn't seem hungry.\nThe man feels worried.","");
-                yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
-                yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
             }
+            yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
+            yield return new WaitForSeconds(timeGap);
+            DetectEndGame();
         }
 
         IEnumerator Cor_Sofa()
@@ -399,21 +384,13 @@ namespace Level_1
                 yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
                 yield return new WaitForSeconds(timeGap);
                 DialogueManager.Instance.StartDialogue( "Nothing happened.","");
-                yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
-                yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
             }
             else
             {
                 idleCat.SetActive(false);
                 playCat.SetActive(true);
                 scaryCat.SetActive(false);
-                if (sofa.activeInHierarchy)
-                { 
-                    sofa.SetActive(false);
-                    damagedSofa.SetActive(true);
-                }
+                damagedSofa.SetActive(true);
                 CurrentState = ((currentState >= CharacterState.NORMAL)) ? CharacterState.LITTLE_SAD : currentState - 1;
                 yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
                 yield return new WaitForSeconds(timeGap);
@@ -421,11 +398,10 @@ namespace Level_1
                     DialogueManager.Instance.StartDialogue("The cat tears the sofa.\nThe room turns into a mess.\n The man feed disappointed.","");
                 else
                     DialogueManager.Instance.StartDialogue( "The cat tears the sofa.\nThe room turns into a mess.\n The man feed exhausted.","");
-                yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
-                yield return new WaitForSeconds(timeGap);
-                DialogueManager.Instance.Hide();
-                CardManager.Instance.Show();
             }
+            yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
+            yield return new WaitForSeconds(timeGap);
+            DetectEndGame();
         }
     }
 }
