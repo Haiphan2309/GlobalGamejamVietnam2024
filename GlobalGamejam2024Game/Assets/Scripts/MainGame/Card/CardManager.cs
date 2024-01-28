@@ -5,12 +5,12 @@ using UnityUtilities;
 
 namespace MainGame
 {
-    public class GameLoopManager : SingletonMonoBehaviour<GameLoopManager>
+    public class CardManager : SingletonMonoBehaviour<CardManager>
     {
         [SerializeField] private SO_Card [] _soCards;
         [SerializeField] private SO_NPC _soNpc;
 
-        [SerializeField] private CardHandSystem cardHandSystem;
+        [SerializeField] private CardHandController cardHandController;
         
         
         private void Awake()
@@ -23,10 +23,10 @@ namespace MainGame
         {
             foreach (var cardSo in _soCards)
             {
-                cardHandSystem.AddCard(cardSo);
+                cardHandController.AddCard(cardSo);
             }
             
-            cardHandSystem.Show();
+            cardHandController.Show();
             
         }
 
@@ -39,7 +39,7 @@ namespace MainGame
         //    var dialogueSentence = new DialogueSentence(cardSo.Dialogue, _soNpc.Name);
         //    DialogueManager.Instance.StartDialogue(dialogueSentence, true);
             
-        //    cardHandSystem.Hide();
+        //    cardHandController.Hide();
             
         //}
 
@@ -49,7 +49,7 @@ namespace MainGame
             
             DialogueManager.Instance.ForceEndDialogue(); 
             
-            cardHandSystem.Show();
+            cardHandController.Show();
         }
     }
 

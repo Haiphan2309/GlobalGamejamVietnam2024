@@ -83,7 +83,7 @@ namespace MainGame.Dialog
             _speakerNameText.text = "";
             
             
-            GameLoopManager.Instance.EndDialogue();
+            CardManager.Instance.EndDialogue();
         }
         
         public void ForceEndDialogue()

@@ -15,7 +15,7 @@ public class CardController : MonoBehaviour
     [SerializeField] private Button _useButton;
     private CardView _cardView;
     private CardHoverInfoProvider _cardHoverInfoProvider;
-    private CardHandSystem _cardHandSystem;
+    private CardHandController cardHandController;
     private CounterController _counterController;
     
     private ICardSkill _cardSkill;
@@ -31,7 +31,7 @@ public class CardController : MonoBehaviour
         _cardSkill = GetComponent<ICardSkill>();
         
         _counterController = FindObjectOfType<CounterController>();
-        _cardHandSystem = FindObjectOfType<CardHandSystem>();
+        cardHandController = FindObjectOfType<CardHandController>();
     }
     
     public void SetCard(SO_Card cardSo)
@@ -59,15 +59,15 @@ public class CardController : MonoBehaviour
             yield break;
         }
         
-        _cardHandSystem.DisableAllCards();
+        cardHandController.DisableAllCards();
 
         TurnSystem.Instance?.PickUpCard(this._cardSo.CardType);
         TurnSystem1.Instance?.PickUpCard(this._cardSo.CardType);
         
-        //GameLoopManager.Instance.UseCard(this, _cardSo);
+        //CardManager.Instance.UseCard(this, _cardSo);
         
-        _cardHandSystem.EnableAllCards();
-        _cardHandSystem.RemoveCard(this);
+        cardHandController.EnableAllCards();
+        cardHandController.RemoveCard(this);
         _cardHoverInfoProvider.HideCardInfo();
         _counterController.DecreaseCounter();
         

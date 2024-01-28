@@ -13,6 +13,9 @@ public class PlayBackgroundMusic : MonoBehaviour
     void Start()
     {
         var sound = SoundManager.Instance;
+        
+        if (sound == null) return;
+        
         if (introMusic)
         {
             sound.PlayMusicWithIntro(backgroundIntroMusic, backgroundMusic);

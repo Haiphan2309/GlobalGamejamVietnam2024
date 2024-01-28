@@ -7,15 +7,17 @@ namespace MainGame.Dialog
     {
         
         [SerializeField] private DialogueView _dialogueView;
-        
-        
-        
+
+        public bool IsDialogActive { get; set; } = true;
+
         public void StartDialogue(string dialog, string speakerName, bool endLastDialogue = true)
         {
             StartDialogue(new DialogueSentence(dialog, speakerName), endLastDialogue );
         }
         public void StartDialogue(DialogueSentence dialogueSentence, bool endLastDialogue = true)
         {
+            IsDialogActive = true;
+            
             if (!_dialogueView.gameObject.activeSelf) 
                 _dialogueView.gameObject.SetActive(true);
             
@@ -27,6 +29,8 @@ namespace MainGame.Dialog
         
         public void StartDialogue(DialogueSentence [] dialogueSentences, bool endLastDialogue = true)
         {
+            IsDialogActive = true;
+            
             if (!_dialogueView.gameObject.activeSelf) 
                 _dialogueView.gameObject.SetActive(true);
             
@@ -43,6 +47,8 @@ namespace MainGame.Dialog
         
         public void ForceEndDialogue()
         {
+            IsDialogActive = false;
+            
             _dialogueView.gameObject.SetActive(false);
             
         }
