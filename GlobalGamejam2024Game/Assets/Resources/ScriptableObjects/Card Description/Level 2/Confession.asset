@@ -15,4 +15,4 @@ MonoBehaviour:
   CardType: 101
   Icon: {fileID: -1181794283, guid: 95b56c6720bf44e46bd7d9765a6474be, type: 3}
   Name: Confession
-  Description: Some cash to spend
+  Description: The power that helps you to confess.

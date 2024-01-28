@@ -15,4 +15,4 @@ MonoBehaviour:
   CardType: 105
   Icon: {fileID: 668179378, guid: 95b56c6720bf44e46bd7d9765a6474be, type: 3}
   Name: Knife
-  Description: A Knife
+  Description: A very sharp knife.

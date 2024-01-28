@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rainy
   m_EditorClassIdentifier: 
   CardType: 107
-  Icon: {fileID: -1986433645, guid: 95b56c6720bf44e46bd7d9765a6474be, type: 3}
+  Icon: {fileID: -937852162, guid: 95b56c6720bf44e46bd7d9765a6474be, type: 3}
   Name: Rainy
-  Description: Rainy
+  Description: It is going to rain

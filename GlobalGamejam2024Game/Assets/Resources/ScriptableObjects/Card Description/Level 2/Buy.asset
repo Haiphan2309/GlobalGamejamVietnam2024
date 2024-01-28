@@ -15,4 +15,4 @@ MonoBehaviour:
   CardType: 102
   Icon: {fileID: 497027304, guid: 95b56c6720bf44e46bd7d9765a6474be, type: 3}
   Name: Buy
-  Description: Buy Something
+  Description: You will have the power to spend money.
