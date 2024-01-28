@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce3f83d013dd6d49a148f35a4ac9231, type: 3}
   m_Name: Scare Mask
   m_EditorClassIdentifier: 
-  CardType: 0
-  Icon: {fileID: -320825117, guid: 1fc4ad6e4d30b114198d9b176f94ff38, type: 3}
-  Name: Cat Picture
-  Description: A picture of a cat
+  CardType: 9
+  Icon: {fileID: -910183669, guid: 1fc4ad6e4d30b114198d9b176f94ff38, type: 3}
+  Name: Scare Mask
+  Description: A creepy mask covered with dust
