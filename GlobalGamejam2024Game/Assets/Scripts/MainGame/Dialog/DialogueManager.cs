@@ -25,6 +25,7 @@ namespace MainGame.Dialog
                 _dialogueView.ForceEndDialogue();
             
             _dialogueView.AddDialogue(dialogueSentence);
+            _dialogueView.Show();
         }
         
         public void StartDialogue(DialogueSentence [] dialogueSentences, bool endLastDialogue = true)
@@ -43,13 +44,14 @@ namespace MainGame.Dialog
                 _dialogueView.AddDialogue(dialogueSentence);
             }
             
+            _dialogueView.Show();
         }
         
         public void ForceEndDialogue()
         {
             IsDialogActive = false;
             
-            _dialogueView.gameObject.SetActive(false);
+            _dialogueView.Hide();
             
         }
 
