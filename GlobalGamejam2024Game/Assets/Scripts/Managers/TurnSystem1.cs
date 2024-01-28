@@ -35,7 +35,7 @@ namespace Level_2
         }
         [SerializeField] NPCDict dict;
         [SerializeField] GameObject winPanel, losePanel;
-        [SerializeField] GameObject creamMan, normalGirl, benchGirl, girlConfession;
+        [SerializeField] GameObject creamMan,knifeMan,maskMan, normalGirl, benchGirl, girlConfession;
         [SerializeField] GameObject[] balloons;
         [SerializeField] GameObject benchObj;
         [SerializeField] float timeGap = 1;
@@ -43,6 +43,11 @@ namespace Level_2
         private void Awake()
         {
             Instance = this;
+
+        }
+
+        private void Start()
+        {
             SetUp(CharacterState.LITTLE_SAD);
             DialogueManager.Instance.Hide();
             CardManager.Instance.Hide();
@@ -233,7 +238,8 @@ namespace Level_2
             CurrentState = (currentState > CharacterState.LITTLE_SAD) ? (currentState - 2) : CharacterState.VERY_SAD;
             iceCream = false;
             creamMan.SetActive(false);
-            dict[currentState].SetActive(true);
+            knifeMan.SetActive(true);
+            maskMan.SetActive(false);
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
             DialogueManager.Instance.StartDialogue( "People sees the man holding a knife.\nThey arrest him.","");
@@ -295,7 +301,8 @@ namespace Level_2
             iceCream = false;
             CurrentState--;
             creamMan.SetActive(false);
-            dict[currentState].SetActive(true);
+            knifeMan.SetActive(false);
+            maskMan.SetActive(true);
             yield return new WaitUntil(() => !DialogueManager.Instance.IsDialogActive);
             yield return new WaitForSeconds(timeGap);
             DialogueManager.Instance.StartDialogue( "The mask makes eveyone scared.\nThey avoid him.","");
