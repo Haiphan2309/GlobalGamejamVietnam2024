@@ -125,3 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueSentences: []
+  _spriteRenderer: {fileID: 7536915942138258513}

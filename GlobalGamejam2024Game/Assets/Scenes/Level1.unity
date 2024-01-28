@@ -476,9 +476,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: The man seem to be sad.
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &255231991 stripped
 GameObject:
@@ -1013,9 +1020,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: The man is laughing!
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &705415044 stripped
 GameObject:
@@ -2247,9 +2261,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: The man seem to be little sad
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &1351435710 stripped
 GameObject:
@@ -2708,6 +2729,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7222510450674772120, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 182
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222510450674772120, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -733
+      objectReference: {fileID: 0}
     - target: {fileID: 7222510451699282133, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2795,6 +2824,22 @@ PrefabInstance:
     - target: {fileID: 7222510451699282137, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222510451799598391, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _beatDuration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222510451799598391, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: _scaleMultiplier
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222510452466325484, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222510452466325484, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7356014319598082141, guid: 5f8c83249c447f740af9e7babe749c46, type: 3}
       propertyPath: _soCards.Array.size
@@ -2918,9 +2963,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: The man seem to be happy.
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &2018994042 stripped
 GameObject:
@@ -2990,9 +3042,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: The man seem to be very sad!
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &2079686221 stripped
 GameObject:
@@ -3197,9 +3256,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+      propertyPath: _dialogueSentences.Array.data[0].Dialogue
+      value: The man's mood is normal.
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7716952908382355367, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
-    - {fileID: 5140927091681027446, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3a4d7363e459ac44192e5abf4fe988de, type: 3}
 --- !u!1 &3440957846808667129 stripped
 GameObject:
