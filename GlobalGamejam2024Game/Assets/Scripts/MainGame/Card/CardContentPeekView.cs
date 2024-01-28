@@ -57,7 +57,7 @@ namespace MainGame.Card
             _isShowcase = true;
             
             _moveTween?.Kill();
-            _moveTween = _moveRectTransform.DOMoveY(_peakTransform.position.y, _moveDuration).SetEase(_moveEase);
+            _moveTween = _moveRectTransform.DOMoveY(_showTransform.position.y, _moveDuration).SetEase(_moveEase);
         }
         
     }
